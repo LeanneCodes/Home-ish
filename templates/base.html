@@ -35,7 +35,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top" style="background-color: white;">
-      <div class="row">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0">Home<em>(ish)</em></h2>
@@ -60,13 +60,7 @@
             <li class="list-inline-item">
               <a class="text-black nav-link" href="">
                 <div class="text-center">
-                  <p class="my-0">Shop</p>
-                </div>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="text-black nav-link" href="">
-                <div class="text-center">
+                  <div><i class="fa-solid fa-loveseat"></i></div>
                   <p class="my-0">Décor Inspo</p>
                 </div>
               </a>
@@ -108,6 +102,20 @@
           </ul>
         </div>
       </div>
+      <div class="row bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/mobile-top-header.html' %}
+            {% include 'includes/main-nav.html' %}
+        </nav>
+      </div>
+      <div id="delivery-banner" class="row text-center">
+          <div class="col bg-black text-white">
+              <h4 class="logo-font my-1">£50 off when you spend a minimum of £{{ free_shipping_threshold }}!</h4>                
+          </div>            
+      </div>
     </header>
 
     {% if messages %}
@@ -124,6 +132,73 @@
 
     {% block postloadjs %}
     {% endblock %}
+
+    <footer class="footer-10">
+      <div class="container">
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading">About</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="d-block">Our story</a>
+                  </li>
+                  <li>
+                    <a href="#" class="d-block">Awards</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading">Company</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="d-block">Our services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="d-block">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-md-0 mb-4">
+                <h2 class="footer-heading">Resources</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="d-block">Newsletter</a>
+                  </li>
+                  <li>
+                    <a href="#" class="d-block">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 mb-md-0 mb-4">
+            <h2 class="footer-heading">Subscribe</h2>
+            <form action="#" class="subscribe-form">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+                <button type="submit" class="form-control submit rounded-right">Subscribe</button>
+              </div>
+              <span class="subheading">Get décor inspiration straight to your inbox</span>
+            </form>
+          </div>
+        </div>
+        <div class="row mt-5 pt-4 border-top">
+          <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
+            <p class="copyright mb-0"> Home<em>(ish)</em> Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+              <script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </footer>
     
   </body>
 </html>

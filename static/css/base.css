@@ -12,6 +12,13 @@ body {
 }
 
 /* Homepage */
+.logo-font {
+    color: black;
+}
+
+.text-black {
+    color: black;
+}
 
 .jumbotron-hero {
     background-image: url("/media/Hero-Image.png");
@@ -49,4 +56,20 @@ body {
 
 .card-title {
     text-align: center;
+}
+
+footer {
+    background-color: #25596f;
+}
+
+.footer-heading {
+    color: white;
+}
+
+.subheading {
+    color: white;
+}
+
+.copyright {
+    color: white !important;
 }
