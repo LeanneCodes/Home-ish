@@ -73,3 +73,7 @@ footer {
 .copyright {
     color: white !important;
 }
+
+.footer-link a {
+    color: white;
+}
