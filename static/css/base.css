@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html {
     height: 100%;
     margin: 30px !important;
@@ -5,6 +7,46 @@ html {
 
 body {
     height: calc(100vh - 164px);
+    font-family: 'Poppins', sans-serif;
+    color: black;
 }
 
 /* Homepage */
+
+.jumbotron-hero {
+    background-image: url("/media/Hero-Image.png");
+    background-size: cover;
+    min-height: 550px;
+    position: relative;
+  }
+
+  .centered-div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    color: white;
+}
+
+.categories {
+    height: 200px;
+    text-align: center;
+    background-color: #d8c7b8;
+    border-color: #d8c7b8;
+    color: white !important;
+}
+
+.categories h2 {
+    line-height: 157px;
+}
+
+.jumbotron-news {
+    background-image: url("/media/White-Chair.png");
+    background-size: cover;
+    min-height: 550px;
+    position: relative;
+  }
+
+.card-title {
+    text-align: center;
+}
