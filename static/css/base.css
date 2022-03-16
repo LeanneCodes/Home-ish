@@ -11,6 +11,27 @@ body {
 }
 
 /* Homepage */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
 .logo-font {
     color: black;
 }
@@ -99,6 +120,18 @@ footer {
 .category_image {
     height: 650px;
     width: 100%;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* Media Queries */
