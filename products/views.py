@@ -21,7 +21,8 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -36,7 +37,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Your search query was not valid!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -55,7 +56,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details and specs """
+    """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
 

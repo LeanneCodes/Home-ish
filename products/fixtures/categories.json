@@ -6,7 +6,7 @@
       "name": "sofas",
       "website_name": "Sofas",
       "category_image": "sofa.png",
-      "category_image_url": "https://res.cloudinary.com/ddpivm1pc/image/upload/v1647449249/home%28ish%29/sofa_rlryyn.png"
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/sofa.png?raw=true"
     }
   },
   {
@@ -16,7 +16,7 @@
       "name": "chairs",
       "website_name": "Chairs",
       "category_image": "chair.png",
-      "category_image_url": "/media/chair.png"
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/chair.png?raw=true"
     }
   },
   {
@@ -26,7 +26,7 @@
       "name": "tables",
       "website_name": "Tables",
       "category_image": "table.png",
-      "category_image_url": "/media/chair.png"
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/table.png?raw=true"
     }
   },
   {
@@ -36,7 +36,7 @@
       "name": "tv_units",
       "website_name": "TV Units",
       "category_image": "tv-unit.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/tv-unit.png?raw=true"
     }
   },
   {
@@ -46,7 +46,7 @@
       "name": "bedroom",
       "website_name": "Bedroom",
       "category_image": "bedroom.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/bedroom.png?raw=true"
     }
   },
   {
@@ -56,7 +56,7 @@
       "name": "lighting",
       "website_name": "Lighting",
       "category_image": "lighting.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/lighting.png?raw=true"
     }
   },
   {
@@ -66,7 +66,7 @@
       "name": "decor",
       "website_name": "Décor",
       "category_image": "decor.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/decor.png?raw=true"
     }
   },
   {
@@ -76,7 +76,7 @@
       "name": "kitchen_dining",
       "website_name": "Kitchen & Dining",
       "category_image": "kitchen.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/kitchen.png?raw=true"
     }
   },
   {
@@ -86,7 +86,7 @@
       "name": "new_arrivals",
       "website_name": "New Arrivals",
       "category_image": "new-arrivals.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/new-arrivals.png?raw=true"
     }
   },
   {
@@ -96,7 +96,7 @@
       "name": "sale",
       "website_name": "Sale",
       "category_image": "sale.png",
-      "category_image_url": ""
+      "category_image_url": "https://github.com/LeanneCodes/Home-ish/blob/main/media/sale.png?raw=true"
     }
   }
 ]
