@@ -20,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
+        'category_image',
         'website_name',
         'name',
     )

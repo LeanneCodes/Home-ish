@@ -20,7 +20,7 @@ body {
 }
 
 .jumbotron-hero {
-    background-image: url("/media/Hero-Image.png");
+    background-image: url("/media/hero-image.png");
     background-size: cover;
     min-height: 550px;
     position: relative;
@@ -47,7 +47,7 @@ body {
 }
 
 .jumbotron-news {
-    background-image: url("/media/White-Chair.png");
+    background-image: url("/media/white-chair.png");
     background-size: cover;
     min-height: 550px;
     position: relative;
@@ -94,6 +94,11 @@ footer {
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+.category_image {
+    height: 650px;
+    width: 100%;
 }
 
 /* Media Queries */
