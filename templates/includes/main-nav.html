@@ -14,10 +14,10 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="new-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                New Items
+                New Arrivals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="new-arrivals-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Products</a>
             </div>
         </li>
 
@@ -26,24 +26,24 @@
                 Homeware
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Sofas</a>
-                <a href="" class="dropdown-item">Chairs</a>
-                <a href="" class="dropdown-item">Tables</a>
-                <a href="" class="dropdown-item">TV Units</a>
-                <a href="" class="dropdown-item">Bedroom</a>
-                <a href="" class="dropdown-item">Lighting</a>
-                <a href="" class="dropdown-item">Décor</a>
-                <a href="" class="dropdown-item">Kitchen</a>
-                <a href="" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=sofas" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
+                <a href="{% url 'products' %}?category=tables" class="dropdown-item">Tables</a>
+                <a href="{% url 'products' %}?category=tv_units" class="dropdown-item">TV Units</a>
+                <a href="{% url 'products' %}?category=bedroom" class="dropdown-item">Bedroom</a>
+                <a href="{% url 'products' %}?category=lighting" class="dropdown-item">Lighting</a>
+                <a href="{% url 'products' %}?category=decor" class="dropdown-item">Décor</a>
+                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Kitchen & Dining</a>
+                <a href="{% url 'products' %}?category=sofas,chairs,tables,tv_units,bedroom,lighting,decor,kitchen_dining" class="dropdown-item">All Homeware</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sales-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                New Items
+                Sale
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sales-link">
-                <a href="" class="dropdown-item">Sale</a>
+                <a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale Items</a>
             </div>
         </li>
 
