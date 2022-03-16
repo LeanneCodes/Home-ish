@@ -1,0 +1,82 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "sofas",
+        "friendly_name": "Sofas"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "chairs",
+        "friendly_name": "Chairs"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "tables",
+        "friendly_name": "Tables"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "tv_units",
+        "friendly_name": "TV Units"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "bedroom",
+        "friendly_name": "Bedroom"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "lighting",
+        "friendly_name": "Lighting"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "decor",
+        "friendly_name": "Décor"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "kitchen_dining",
+        "friendly_name": "Kitchen & Dining"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.category",
+      "fields": {
+        "name": "sale",
+        "friendly_name": "Sale"
+      }
+    }
+  ]
