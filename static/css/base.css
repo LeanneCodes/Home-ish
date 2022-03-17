@@ -134,6 +134,21 @@ footer {
     cursor: pointer;
 }
 
+/* Shopping Bag */
+
+.btn-outline-green {
+    background: white;
+    color: darkolivegreen !important; /* use important to override link colors for <a> elements */
+    border: 1px solid darkolivegreen;
+}
+
+.btn-outline-green:hover,
+.btn-outline-green:active,
+.btn-outline-green:focus {
+    background: darkolivegreen;
+    color: white !important;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
