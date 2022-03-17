@@ -1,5 +1,12 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=new_arrivals" id="new-arrivals-link" aria-haspopup="true" aria-expanded="false">
+                New Arrivals
+            </a>
+        </li>
+
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
@@ -9,15 +16,6 @@
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="new-arrivals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                New Arrivals
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="new-arrivals-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Products</a>
             </div>
         </li>
 
@@ -38,12 +36,21 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sales-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=sale" id="sales-link" aria-haspopup="true" aria-expanded="false">
                 Sale
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sales-link">
-                <a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale Items</a>
-            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="decor-inspo" aria-haspopup="true" aria-expanded="false">
+                Décor Inspiration
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="about-us" aria-haspopup="true" aria-expanded="false">
+                About Us
+            </a>
         </li>
 
     </ul>
