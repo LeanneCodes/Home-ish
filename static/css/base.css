@@ -19,6 +19,28 @@ body {
     width: 1.5rem;
 }
 
+#delivery-banner {
+    background-color: #bea06a !important;
+    color: white !important;
+}
+
+.nav-link {
+    color: #dbcab8 !important;
+}
+
+.border-gold {
+    color: #bea06a;
+}
+
+.btn-gold {
+    background-color: white;
+    color: #bea06a;
+}
+
+.cart {
+    color: #448070;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -159,7 +181,7 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 113px;
     right: 15px;
     z-index: 99999999999;
 }

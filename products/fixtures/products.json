@@ -1585,13 +1585,13 @@
       "model": "products.product",
       "fields": {
         "sku": "pp5005940242",
-        "name": "Letty",
+        "name": "Lucy",
         "description": "Double Headboard, Fir Green Velvet",
         "price": "200.00",
         "category": 5,
         "rating": 3.91,
         "image_url": "https://img.made.com/image/upload/c_pad,d_madeplusgrey.svg,f_auto,w_982,dpr_2.0,q_auto:good,b_rgb:f5f6f4/v4/catalog/product/asset/a/a/e/a/aaead96bfa5163424b1682b4eedec8afe62cdc1a_HDBLET001GRE_UK_Letty_Double_Headboard_Fir_Green_Velvet_ar3_2_LB01_PS.png",
-        "image": "letty.jpeg",
+        "image": "lucy.jpeg",
         "width": "147 cm",
         "height": "143 cm",
         "depth": "40 cm"
