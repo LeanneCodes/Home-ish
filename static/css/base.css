@@ -21,11 +21,11 @@ body {
 
 #delivery-banner {
     background-color: #bea06a !important;
-    color: white !important;
+    color: #f5f5f3 !important;
 }
 
 .nav-link {
-    color: #dbcab8 !important;
+    color: #f5f5f3 !important;
 }
 
 .border-gold {
@@ -52,6 +52,19 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-green {
+    background: #448070;
+    color: white;
+}
+
+.btn-green:hover {
+    color: white;
+}
+
+.form-control {
+    height: calc(1.5em + 0.75rem + 3px) !important;
 }
 
 .logo-font {
@@ -162,18 +175,47 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.pd-heart {
+    color: #448070;
+    font-size: 1.3em !important;
+}
+
+.pd-heart:hover {
+    color: #bea06a;
+}
+
+.new {
+    border: #6aa1a1;
+    border-radius: 2px;
+    background-color: #6aa1a1;
+}
+
+.new a {
+    color: white !important;
+}
+
+.sale {
+    border: #d7717c;
+    border-radius: 2px;
+    background-color: #d7717c;
+}
+
+.sale a {
+    color: white !important;
+}
+
 /* Shopping Bag */
 
 .btn-outline-green {
     background: white;
-    color: darkolivegreen !important; /* use important to override link colors for <a> elements */
-    border: 1px solid darkolivegreen;
+    color: #448070 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #448070;
 }
 
 .btn-outline-green:hover,
 .btn-outline-green:active,
 .btn-outline-green:focus {
-    background: darkolivegreen;
+    background: #448070;
     color: white !important;
 }
 
