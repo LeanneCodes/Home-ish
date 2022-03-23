@@ -29,12 +29,30 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
+                    {% if product.category2 == 10 %}
+                    <p class="text-muted"><s>£{{ product.price }}</s></p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.get_sale }}</p>
+                    {% else %}
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                    {% endif %}
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                             <i class="fas fa-tag mr-1"></i>{{ product.category.website_name }}
                         </a>
+                    </p>
+                    {% endif %}
+                    {% if product.category2 == 9 %}
+                    <p>
+                        <button class="new">
+                            <a href="{% url 'products' %}?category=new_arrivals">New</a>
+                        </button>
+                    </p>
+                    {% elif product.category2 == 10 %}
+                    <p>
+                        <button class="sale">
+                            <a href="{% url 'products' %}?category=sale">Sale</a>
+                        </button>
                     </p>
                     {% endif %}
                     {% if product.rating %}
