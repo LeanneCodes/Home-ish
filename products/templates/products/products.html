@@ -13,13 +13,16 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col text-center pr-0 pl-0">
                 {% for c in current_categories %}
-                    <a href="{% url 'products' %}?category={{ c.name }}">
-                        <div class="category_image">
-                            <img src="{{ c.category_image_url }}" alt="{{ c.name }}">
+                    <div class="jumbotron jumbotron-fluid jumbotron-category mb-0" alt="{{ c.name }}">
+                        <div class="container">
+                            <a href="{% url 'products' %}?category={{ c.name }}" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">
+                                <h1 class="display-4">{{ c.website_name }}</h1>
+                            </a>
                         </div>
-                    </a>
+                    </div>
+                    <hr>
                 {% endfor %}
             </div>
         </div>
@@ -140,9 +143,9 @@
             </div>
         </div>
     </div>
-    <div class="btt-button shadow-sm rounded-0 border border-black">
+    <div class="btt-button shadow-sm rounded-circle" style="background-color: #3f2a33; border: #3f2a33;">
         <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            <i class="fas fa-arrow-up mx-auto my-auto" style="color: #f5f5f3;"></i>
         </a>	
     </div>
 {% endblock %}
@@ -151,7 +154,7 @@
     {{ block.super }}
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
-			window.scrollTo(0,680)
+			window.scrollTo(0,0)
 		})
 	</script>
     
