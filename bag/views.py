@@ -13,7 +13,7 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a quantity of the specified product to the shopping cart """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -25,14 +25,14 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your shopping bag')
+        messages.success(request, f'Added {product.name} to your shopping cart')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):
-    """ Adjust the quantity of the specified product in the shopping bag """
+    """ Adjust the quantity of the specified product in the shopping cart """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -43,21 +43,21 @@ def adjust_bag(request, item_id):
             messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your shopping bag')
+        messages.success(request, f'Removed {product.name} from your shopping cart')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
 
 def remove_from_bag(request, item_id):
-    """ Remove the specified product from the shopping bag """
+    """ Remove the specified product from the shopping cart """
 
     try:
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('bag', {})
 
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your shopping bag')
+        messages.success(request, f'Removed {product.name} from your shopping cart')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
