@@ -20,7 +20,8 @@
                         <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Shopping Cart</h1>
                     </div>
                 </div>
-                <hr>
+                <br>
+                <br>
             </div>
         </div>
     </div>
@@ -96,10 +97,15 @@
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                    <h6>Discount Awarded: £{{ discount_delta|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if discount_delta > 0 %}
+                                    {% if total < minimum_spend_threshold %}
                                         <p class="mb-1 text-danger">
-                                            You could get £50 off by spending <strong>£{{ discount_delta }}</strong> more!
+                                            You could get £50 off and free delivery by spending <strong>£{{ more_spend }}</strong> more!
+                                        </p>
+                                    {% else %}
+                                        <p class="mb-1 text-success">
+                                            Free delivery and discount applied!
                                         </p>
                                     {% endif %}
                                 </td>
@@ -124,12 +130,14 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5 text-center">Your shopping cart is currently empty!</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-green btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span>Continue Shopping</span>
-                    </a>
+                    <div class="text-center mx-0">
+                        <a href="{% url 'products' %}" class="btn btn-outline-green btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span>Continue Shopping</span>
+                        </a>
+                    </div>
                 {% endif %}
             </div>
         </div>
