@@ -5,9 +5,13 @@
 {% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
 
 {% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Sign Up Closed" %}</h2>
-<hr>
+<div class="jumbotron jumbotron-fluid jumbotron-category mb-0" style="margin-top: 10rem !important;">
+    <div class="container">
+        <h1 class="display-4 text-center" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Sign Up Closed" %}</h1>
+    </div>
+</div>
+<br>
+<br>
 
-<p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+<p class="text-center">{% trans "We are sorry, but the sign up is currently closed." %}</p>
 {% endblock %}

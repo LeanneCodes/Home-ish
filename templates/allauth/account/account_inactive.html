@@ -5,9 +5,13 @@
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
 {% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Account Inactive" %}</h2>
-<hr>
+<div class="jumbotron jumbotron-fluid jumbotron-category mb-0" style="margin-top: 10rem !important;">
+    <div class="container">
+        <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Account Inactive" %}</h1>
+    </div>
+  </div>
+  <br>
+  <br>
 
-<p>{% trans "This account is inactive." %}</p>
+<p class="text-center">{% trans "This account is inactive." %}</p>
 {% endblock %}

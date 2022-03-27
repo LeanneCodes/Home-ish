@@ -39,13 +39,13 @@
                         Total{% if discount_delta > 0 %} (Exc. delivery){% endif %}: 
                         <span class="float-right">£{{ total|floatformat:2 }}</span>
                     </p></strong>
-                    {% if discount_delta > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
-                            Spend <strong>£{{ discount_delta }}</strong> more to get £50 off!
+                    {% if total < 350 %}
+                        <p class="mb-0 p-2 btn-outline-green rounded text-black text-center">
+                            Spend <strong>£{{ more_spend }}</strong> more to get £50 off!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
+                    <a href="{% url 'view_bag' %}" class="btn btn-green btn-block">
+                        <span>Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>

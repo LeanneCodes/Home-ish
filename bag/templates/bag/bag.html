@@ -100,7 +100,7 @@
                                     <h6>Discount Awarded: £{{ discount_delta|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if total < minimum_spend_threshold %}
-                                        <p class="mb-1 text-danger">
+                                        <p class="mb-1 text-info">
                                             You could get £50 off and free delivery by spending <strong>£{{ more_spend }}</strong> more!
                                         </p>
                                     {% else %}
