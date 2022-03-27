@@ -170,15 +170,6 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-.pd-heart {
-    color: #448070;
-    font-size: 1.3em !important;
-}
-
-.pd-heart:hover {
-    color: #bea06a;
-}
-
 .new {
     border: #6aa1a1;
     border-radius: 2px;
@@ -243,6 +234,70 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Image Gallery */
+
+.gallery-container {
+    margin: 0 55px 20px 55px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 250px 250px;
+    grid-gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-item .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.gallery-item:hover .image img {
+    transform: scale(1.5);
+}
+
+.w-1 {
+    grid-column: span 1;
+}
+
+.w-2 {
+    grid-column: span 2;
+}
+
+.w-3 {
+    grid-column: span 3;
+}
+
+.w-4 {
+    grid-column: span 4;
+}
+
+.h-1 {
+    grid-row: span 1;
+}
+
+.h-2 {
+    grid-row: span 2;
+}
+
+.h-3 {
+    grid-row: span 3;
 }
 
 /* Media Queries */
@@ -334,70 +389,6 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-}
-
-/* Image Gallery */
-
-.gallery-container {
-    margin: 0 55px 20px 55px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: 250px 250px;
-    grid-gap: 10px;
-}
-
-.gallery-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.gallery-item .image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.gallery-item .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-}
-
-.gallery-item:hover .image img {
-    transform: scale(1.5);
-}
-
-.w-1 {
-    grid-column: span 1;
-}
-
-.w-2 {
-    grid-column: span 2;
-}
-
-.w-3 {
-    grid-column: span 3;
-}
-
-.w-4 {
-    grid-column: span 4;
-}
-
-.h-1 {
-    grid-row: span 1;
-}
-
-.h-2 {
-    grid-row: span 2;
-}
-
-.h-3 {
-    grid-row: span 3;
 }
 
 @media screen and (max-width:500px) {

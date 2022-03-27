@@ -42,3 +42,8 @@ class Product(models.Model):
         """ Calculate cost with the discount """
         price = int(self.price * (100 - 15) / 100)
         return price
+
+
+class Wishlist(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)

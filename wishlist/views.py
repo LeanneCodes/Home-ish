@@ -1,7 +1,8 @@
+from django.http.response import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 
-from products.models import Product
+from products.models import Wishlist, Product
 
 # Create your views here.
 
@@ -12,13 +13,13 @@ def wishlist(request):
     return render(request, 'wishlist/wishlist.html')
 
 
-def add_to_wishlist(request, item_id):
+def add_to_wishlist(request):
     """ Add items to wishlist page """
 
-    product = get_object_or_404(Product, pk=item_id)
-    redirect_url = request.POST.get('redirect_url')
-    wishlist = request.session.get('wishlist', {})
-    messages.success(request, f'Added {product.name} to your wishlist')
+    wishlist_items = Wishlist.objects.filter(product=request.product)
 
-    request.session['wishlist'] = wishlist
-    return redirect(redirect_url)
+    context = {
+        'wishlist_items': wishlist_items,
+    }
+
+    return render(request, 'wishlist/wishlist.html', context)

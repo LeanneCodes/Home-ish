@@ -91,6 +91,7 @@
                 {% endif %}
               </div>
             </li>
+            {% if request.user.is_authenticated %}
             <li class="list-inline-item">
               <a class="nav-link" href="{% url 'wishlist' %}">
                 <div class="text-center">
@@ -98,6 +99,7 @@
                 </div>
               </a>
             </li>
+            {% endif %}
             <li class="list-inline-item">
               <a class="nav-link" href="{% url 'view_bag' %}">
                 <div class="text-center">
