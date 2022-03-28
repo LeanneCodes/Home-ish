@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -34,7 +35,7 @@ class Product(models.Model):
     height = models.CharField(max_length=254, null=True, blank=True)
     depth = models.CharField(max_length=254, null=True, blank=True)
     sale = models.IntegerField('85', blank=True, default=0)
-    user_wishlist = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='wishlist')
+    wishlists = models.ManyToManyField(User, blank=True, default=None, related_name="wishlist")
 
     def __str__(self):
         return self.name
@@ -44,3 +45,4 @@ class Product(models.Model):
         """ Calculate cost with the discount """
         price = int(self.price * (100 - 15) / 100)
         return price
+

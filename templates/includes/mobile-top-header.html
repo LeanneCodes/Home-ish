@@ -1,6 +1,6 @@
 <div style="max-width: 50%; margin: auto; margin-top: 0.5rem !important;">
     <a class="d-block d-lg-none" href="{% url 'home' %}">
-        <h5 class="text-center mb-0" style="color: #f5f5f3 !important; text-decoration: none;">Home<em>(ish)</em></h5>
+        <h5 class="text-center mb-0" style="color: #f5f5f3 !important; text-decoration: none;">Home(ish)</h5>
     </a>
 </div>
 <div style="margin: auto;">
@@ -51,15 +51,6 @@
             {% endif %}
         </div>
     </li>
-    {% if request.user.is_authenticated %}
-    <li class="list-inline-item">
-        <a class="text-black nav-link d-block d-lg-none" href="{% url 'wishlist' %}">
-        <div class="text-center">
-            <div><i class="fa-solid fa-heart"></i></div>
-        </div>
-        </a>
-    </li>
-    {% endif %}
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center">

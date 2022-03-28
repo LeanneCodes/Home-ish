@@ -36,7 +36,7 @@
     <title>Home(ish) {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top" style="background-color: #3f2a33">
+    <header class="container-fluid fixed-top" style="background-color: #372f42">
       <div id="delivery-banner" class="row text-center">
         <div class="col">
             <p class="my-0">£50 off and free delivery, when you spend a minimum of £{{ minimum_spend_threshold }}!</p>                
@@ -45,7 +45,7 @@
       <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h3 class="my-0">Home<em>(ish)</em></h3>
+            <h3 class="my-0">Home(ish)</h3>
           </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -90,15 +90,6 @@
                 {% endif %}
               </div>
             </li>
-            {% if request.user.is_authenticated %}
-            <li class="list-inline-item">
-              <a class="nav-link" href="{% url 'wishlist' %}">
-                <div class="text-center">
-                  <div><i class="fa-solid fa-heart"></i></div>
-                </div>
-              </a>
-            </li>
-            {% endif %}
             <li class="list-inline-item">
               <a class="nav-link" href="{% url 'view_bag' %}">
                 <div class="text-center">
@@ -160,72 +151,64 @@
     </script>
     {% endblock %}
 
-    <!-- <footer class="footer-10">
-      <div class="container">
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-md-7">
-            <div class="row">
-              <div class="col-md-4 mb-md-0 mb-4">
-                <h2 class="footer-heading">About</h2>
-                <ul class="list-unstyled footer-link">
-                  <li>
-                    <a href="#" class="d-block">Our story</a>
-                  </li>
-                  <li>
-                    <a href="#" class="d-block">Awards</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-4 mb-md-0 mb-4">
-                <h2 class="footer-heading">Company</h2>
-                <ul class="list-unstyled footer-link">
-                  <li>
-                    <a href="#" class="d-block">Our services</a>
-                  </li>
-                  <li>
-                    <a href="#" class="d-block">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-4 mb-md-0 mb-4">
-                <h2 class="footer-heading">Resources</h2>
-                <ul class="list-unstyled footer-link">
-                  <li>
-                    <a href="#" class="d-block">Newsletter</a>
-                  </li>
-                  <li>
-                    <a href="#" class="d-block">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5 mb-md-0 mb-4">
-            <h2 class="footer-heading">Subscribe</h2>
-            <form action="#" class="subscribe-form">
+    <footer class="footer-06">
+			<div class="container">
+				<div class="row align-items-center align-items-stretch mb-5">
+					<div class="col-md-4 py-4 py-md-5 aside-stretch d-flex align-items-center">
+						<div class="w-100">
+							<span class="subheading">Subscribe to our</span>
+							<h3 class="heading-section">Newsletter</h3>
+						</div>
+					</div>
+					<div class="col-md-8 py-4 py-md-5 d-flex align-items-center pl-md-5 aside-stretch-right">
+						<form action="#" class="subscribe-form w-100">
               <div class="form-group d-flex">
                 <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-                <button type="submit" class="form-control submit rounded-right">Subscribe</button>
+                <button type="submit" class="form-control submit"><span>Submit</span></button>
               </div>
-              <span class="subheading">Get décor inspiration straight to your inbox</span>
             </form>
-          </div>
-        </div>
-        <div class="row mt-5 pt-4 border-top">
-          <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
-            <p class="copyright mb-0"> Home<em>(ish)</em> Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-              <script>
-                document.write(new Date().getFullYear());
-              </script> All rights reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-    </footer> -->
+					</div>
+				</div>
+				<div class="row pt-4">
+					<div class="col-md-3 col-lg-6 order-md-last">
+						<div class="row justify-content-end">
+							<div class="col-md-12 col-lg-9 text-md-right mb-md-0 mb-4">
+								<h2 class="footer-heading"><a href="#" class="logo">Home(ish)</a></h2>
+								<p class="copyright">
+							  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9 col-lg-6">
+						<div class="row">
+							<div class="col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">Information</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Privacy Policy</a></li>
+                  <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Terms and Conditions</a></li>
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Contact Us</a></li>
+		            </ul>
+							</div>
+							<div class="col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">Home(ish) Services</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Home(ish) Designs</a></li>
+		            </ul>
+							</div>
+							<div class="col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">Social</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Facebook</a></li>
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Instagram</a></li>
+		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Pinterest</a></li>
+		            </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
     
   </body>
 </html>
