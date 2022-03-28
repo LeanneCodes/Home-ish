@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'profiles',
     'decor',
     'contact',
+    'design',
 
     # Other
     'crispy_forms',

@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 
 def decor(request):
-    """ A view that renders images of decor images on the page """
+    """ A view that shows design inspirations """
 
     return render(request, 'decor/decor.html')
