@@ -22,8 +22,36 @@
             </div>
         </div>
     </div>
-    
-    <h1>{{ wishlist_items }} wishlist</h1>
+
+    {% if wishlist %}
+        {% for product in wishlist %}
+            <div class="card mt-5 mb-3" style="max-width: 80%; margin: auto;">
+                <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="card-text">{% if product.category2 == 10 %}{{ product.get_sale }}{% else %}{{ product.price }}{% endif %}</p>
+                    <input type="submit" class="btn btn-green" value="Add to Cart">
+                    </div>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="card-text text-center mt-5">No products have been added to your wishlist yet</p>
+        <div class="col-12 text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-green mt-1">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Continue Shopping</span>
+            </a>
+        </div>
+    {% endif %}
 
     <div class="btt-button shadow-sm rounded-circle" style="background-color: #3f2a33; border: #3f2a33;">
         <a class="btt-link d-flex h-100">
