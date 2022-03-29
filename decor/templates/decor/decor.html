@@ -32,11 +32,19 @@
     <div>
         <h5 class="text-center">Need some décor inspiration?<br>Well, we are here to help!</h5>
         <p class="text-muted text-center">Browse through our décor inspirations below or if you want some personalised help, book an appointment with an in-home designer today!</p>
+        {% if request.user.is_authenticated %}
         <div class="text-center">
             <button class="btn btn-green">
                 <a href="{% url 'design' %}">Make an appointment</a>
             </button>
         </div>
+        {% else %}
+        <div class="text-center">
+            <button class="btn btn-green">
+                <a href="{% url 'account_login' %}">Login</a>
+            </button>
+        </div>
+        {% endif %}
     </div>
     <br>
     <div class="gallery-container">

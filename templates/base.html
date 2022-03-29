@@ -73,11 +73,15 @@
             </li>
             {% if request.user.is_authenticated %}
             <li class="list-inline-item">
-              <a class="nav-link" href="{% url 'design' %}">
+              <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fa-solid fa-compass-drafting"></i></div>
                 </div>
               </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                <a href="{% url 'design' %}" class="dropdown-item">Book a Design Appointment</a>
+                <a href="{% url 'design_show' %}" class="dropdown-item">Your Appointments</a>
+              </div>
             </li>
             {% endif %}
             <li class="list-inline-item">

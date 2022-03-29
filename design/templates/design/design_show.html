@@ -38,7 +38,7 @@
         {% for item in items %}
         <div style="margin: auto; border: #448070 1px solid;" class="card w-50">
             <div class="card-body text-center">
-                <h5 class="card-title">You chose # for your appointment</h5>
+                <h5 class="card-title">You chose {{ item.location }} for your appointment</h5>
                 <p class="card-text">Time: {{ item.time }}</p>
                 <p class="card-text">Date: {{ item.date }}</p>
                 <p class="card-text">Visiting you at:<br>{{ item.street_address1 }}, {{ item.street_address2 }}<br>{{ item.town_or_city}},<br>{{ item.county }},<br>{{ item.postcode }},<br>{{ item.country }}</p>

@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Appointment
+from .models import Appointment, Location
 
 # The fields available to iterate through in the user interface
 
@@ -23,6 +23,16 @@ class AppointmentForm(forms.ModelForm):
             "county",
             "postcode",
             "country",
+            "location",
+        ]
+
+
+class LocationForm(forms.ModelForm):
+    class Meta:
+        model = Location
+        fields = [
+            "store_locator",
+            "designer",
         ]
 
     # def __init__(self, *args, **kwargs):

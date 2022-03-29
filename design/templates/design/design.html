@@ -35,6 +35,11 @@
         <form action="#" method="POST" style="max-width: 60%; margin: auto;">
             {% csrf_token %}
             <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
+                <legend class="fieldset-label small text-black px-2 w-auto">Choose Your Designer</legend>
+                {% render_field form.location class="form-control" placeholder="Choose Your Designer" %}
+                <br>
+            </fieldset>
+            <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
                 <legend class="fieldset-label small text-black px-2 w-auto">Your Details</legend>
                 {% render_field form.first_name class="form-control" placeholder="First Name" %}
                 <br>
@@ -44,9 +49,7 @@
                 <br>
                 {% render_field form.user_phone class="form-control" placeholder="Mobile" minlength="11" %}
                 <br>
-                {% render_field form.age class="form-control" min="18" max="100" %}
-                <br>
-                {% render_field form.gender class="form-control" placeholder="Gender" %}
+                {% render_field form.age class="form-control" min="18" max="100" placeholder="Age" %}
                 <br>
             </fieldset>
             <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
@@ -72,22 +75,8 @@
                 <br>
             </fieldset>
             <div class="text-center">
-                {% if user.is_authenticated %}
-                    <label class="form-check-label" for="id-save-info">Save this information to my profile</label>
-                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-                {% else %}
-                    <label class="form-check-label" for="id-save-info">
-                        <a style="color: #448070;" href="{% url 'account_signup' %}">Create an account</a> or 
-                        <a style="color: #448070;" href="{% url 'account_login' %}">login</a> to save this information
-                    </label>
-                {% endif %}
-            </div>
-            <br>
-            <div class="text-center">
                 <input type="submit" id="submit" class="submit-btn btn btn-green" value="Book Now">
             </div>
         </form>
     </div>
-    <br>
-    <br>
 {% endblock %}
