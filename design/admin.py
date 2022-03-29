@@ -9,7 +9,7 @@ class LocationAdmin(admin.ModelAdmin):
     search_fields = ["store_locator", "designer"]
 
 
-@admin.register(Appointment())
+@admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("location",)}
     list_filter = ("date", "location")
@@ -20,7 +20,6 @@ class AppointmentAdmin(admin.ModelAdmin):
         "last_name",
         "age",
         "gender",
-        "covid_safe",
         "date",
         "time",
     )

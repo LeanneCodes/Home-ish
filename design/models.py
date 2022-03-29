@@ -35,11 +35,9 @@ class Appointment(models.Model):
 
     GENDER = [("Woman", "Woman"), ("Man", "Man"), ("Other", "Other")]
 
-    COVID = [("Yes", "Yes"), ("No", "No")]
-
-    customer = models.ForeignKey(
-        User, primary_key=True, default="", null=False, on_delete=models.CASCADE,
-        related_name="user"
+    user = models.ForeignKey(
+        User, null=True, blank=True, on_delete=models.CASCADE,
+        related_name="hiuser"
     )
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -51,15 +49,13 @@ class Appointment(models.Model):
         max_length=10, validators=[MinValueValidator(datetime.date.today)]
     )
     time = models.CharField(max_length=5, choices=TIMES)
-    covid_safe = models.CharField(max_length=6, choices=COVID)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     county = models.CharField(max_length=80, null=True, blank=True)
     country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
-    location = models.ForeignKey("Location", null=True,
-                                   on_delete=models.CASCADE)
+    location = models.ForeignKey("Location", null=True, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=250, unique=False)
 
     class Meta:

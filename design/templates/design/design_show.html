@@ -16,7 +16,7 @@
             <div class="col text-center pr-0 pl-0">
                 <div class="jumbotron jumbotron-fluid jumbotron-category mb-0">
                     <div class="container">
-                        <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Book a Design Appointment</h1>
+                        <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Your Appointments</h1>
                     </div>
                 </div>
             </div>
@@ -30,8 +30,31 @@
     <br>
     <br>
     <div>
-        <h5 class="text-center">Show a booking today!</h5>
+        <h5 class="text-center">Your appointment(s) below</h5>
     </div>
     <br>
+    
+    {% if items %}
+        {% for item in items %}
+        <div style="margin: auto; border: #448070 1px solid;" class="card w-50">
+            <div class="card-body text-center">
+                <h5 class="card-title">You chose # for your appointment</h5>
+                <p class="card-text">Time: {{ item.time }}</p>
+                <p class="card-text">Date: {{ item.date }}</p>
+                <p class="card-text">Visiting you at:<br>{{ item.street_address1 }}, {{ item.street_address2 }}<br>{{ item.town_or_city}},<br>{{ item.county }},<br>{{ item.postcode }},<br>{{ item.country }}</p>
+                <a href="/design/design_update/{{ item.id }}"><i class="fa fa-edit"></i> Edit</a>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    {% else %}
+        <p class="lead mb-5 text-center">You currently have no appointmments!</p>
+        <div class="text-center">
+            <input href="{% url 'design' %}" type="submit" id="submit" class="submit-btn btn btn-green" value="Book an Appointment">
+        </div>
+    {% endif %}
     <br>
+    <div class="text-center">
+        <input href="{% url 'home' %}" type="submit" id="submit" class="submit-btn btn btn-green" value="Back to Home">
+    </div>
 {% endblock %}
