@@ -10,14 +10,14 @@
 {% endblock %}
 
 {% block content %}
-    <div id="hero-image">   
-        <div class="jumbotron-hero" style="text-align: center;">
-            <div class="centered-div">
-                <h1 class="display-1">Home<em>(ish)</em></h1>
+    <div >   
+        <div class="jumbotron-hero jumbotron jumbotron-fluid" id="hero-image" style="text-align: center;">
+            <div class="centered-div container">
+                <h1 class="display-1 brand-name">Home(ish)</h1>
                 <p class="lead">For renters and landlords...</p>
-                <p class="lead">...Make your space feel like home</p>
+                <p class="lead">...Feel at home with high-end furniture</p>
                 <br>
-                <a class="btn btn-light btn-lg" href="{% url 'products' %}" role="button">Shop Now</a>
+                <a class="btn btn-light btn-sm" href="{% url 'products' %}" role="button">Shop Now</a>
             </div>
         </div>
     </div> 
@@ -101,7 +101,7 @@
                     <input type="email" class="form-control mb-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address">
                 </div>
             </form>
-            <a class="btn btn-light btn-lg" href="#" role="button">Submit</a>
+            <a class="btn btn-light btn-sm" href="#" role="button">Submit</a>
         </div>
     </div>
 

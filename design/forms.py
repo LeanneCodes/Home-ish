@@ -13,7 +13,6 @@ class AppointmentForm(forms.ModelForm):
             "last_name",
             "user_email",
             "age",
-            "gender",
             "user_phone",
             "date",
             "time",

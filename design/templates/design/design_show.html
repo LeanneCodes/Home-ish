@@ -60,7 +60,9 @@
                             </button>
                             </div>
                             <div class="modal-body">
-                            Are you sure you want to delete this appointment?
+                                <p class="text-danger">Are you sure you want to delete this appointment?</p>
+                                <p class="card-text">Appointment: {{ item.date }} for {{ item.time }} </p>
+                                <p class="card-text">Location:<br>{{ item.street_address1 }}, {{ item.street_address2 }}<br>{{ item.town_or_city}}, {{ item.county }},<br>{{ item.postcode }},<br>{{ item.country }}</p>
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

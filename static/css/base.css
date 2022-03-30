@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 html {
     height: 100%;
@@ -11,6 +12,10 @@ body {
 }
 
 /* Homepage */
+.brand-name {
+    font-family: 'Homemade Apple', cursive;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -77,9 +82,9 @@ body {
 }
 
 .jumbotron-hero {
-    background-image: url("/media/hero-image.png");
+    background-image: url("/media/homeish.png");
     background-size: cover;
-    min-height: 550px;
+    min-height: 844px;
     position: relative;
 }
 
