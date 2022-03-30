@@ -35,13 +35,13 @@
         {% if request.user.is_authenticated %}
         <div class="text-center">
             <button class="btn btn-green">
-                <a href="{% url 'design' %}">Make an appointment</a>
+                <a style="color: white !important; text-decoration: none !important;" href="{% url 'design' %}">Make an appointment</a>
             </button>
         </div>
         {% else %}
         <div class="text-center">
             <button class="btn btn-green">
-                <a href="{% url 'account_login' %}">Login</a>
+                <a style="color: white !important; text-decoration: none !important;" href="{% url 'account_login' %}">Login</a>
             </button>
         </div>
         {% endif %}
