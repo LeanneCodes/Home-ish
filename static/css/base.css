@@ -302,8 +302,41 @@ input[name='q']::placeholder {
 }
 
 /* Contact Us */
+.dbox {
+    margin-bottom: 25px;
+}
 
+.dbox .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #448070;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    color: white;
+}
 
+.dbox .icon span {
+    font-size: 20px;
+    color: #fff;
+}
+
+.fa {
+    display: inline-block;
+    text-rendering: auto;
+}
+
+.dbox .text {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.wrapper {
+    width: 100%;
+}
 
 /* Media Queries */
 
