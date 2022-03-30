@@ -190,7 +190,7 @@
 					<div class="col-md-3 col-lg-6 order-md-last">
 						<div class="row justify-content-end">
 							<div class="col-md-12 col-lg-9 text-md-right mb-md-0 mb-4">
-								<h2 class="footer-heading"><a href="#" class="logo">Home(ish)</a></h2>
+								<h2 class="footer-heading"><a href="{% url 'home' %}" class="logo">Home(ish)</a></h2>
 								<p class="copyright">
 							  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
 							</div>
@@ -203,13 +203,13 @@
 								<ul class="list-unstyled">
 		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Privacy Policy</a></li>
                   <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Terms and Conditions</a></li>
-		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Contact Us</a></li>
+		              <li><a href="{% url 'contact' %}" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Contact Us</a></li>
 		            </ul>
 							</div>
 							<div class="col-md-4 mb-md-0 mb-4">
 								<h2 class="footer-heading">Home(ish) Services</h2>
 								<ul class="list-unstyled">
-		              <li><a href="#" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Home(ish) Designs</a></li>
+		              <li><a href="{% url 'design' %}" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Home(ish) Designs</a></li>
 		            </ul>
 							</div>
 							<div class="col-md-4 mb-md-0 mb-4">
