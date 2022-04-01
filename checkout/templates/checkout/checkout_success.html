@@ -154,7 +154,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <p class="mb-0 text-black font-weight-bold">Grand Total: {% if order.order_total >= 350 %}£{{ order.grand_total|add:"-50"|floatformat:2 }} {% else %}£{{ order.grand_total|floatformat:2 }}{% endif %}</p>
+                        <p class="mb-0 font-weight-bold" style="color: #448070;">Grand Total: {% if order.order_total >= 350 %}£{{ order.grand_total|add:"-50"|floatformat:2 }} {% else %}£{{ order.grand_total|floatformat:2 }}{% endif %}</p>
                     </div>
                 </div>
                 <br>
