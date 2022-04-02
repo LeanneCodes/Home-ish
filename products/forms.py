@@ -7,7 +7,20 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = [
+            "category",
+            "category2",
+            "sku",
+            "name",
+            "description",
+            "price",
+            "rating",
+            "image_url",
+            "image",
+            "width",
+            "height",
+            "depth",
+        ]
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
@@ -19,3 +32,4 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = website_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black'
+

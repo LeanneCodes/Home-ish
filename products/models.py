@@ -22,8 +22,14 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
+    PROMO = [
+        ("sale", "sale"),
+        ("new_arrivals", "new_arrivals"),
+    ]
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    category2 = models.CharField(max_length=254, null=True, blank=True)
+    category2 = models.CharField(max_length=254, null=True, blank=True, choices=PROMO)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -34,7 +40,7 @@ class Product(models.Model):
     width = models.CharField(max_length=254, null=True, blank=True)
     height = models.CharField(max_length=254, null=True, blank=True)
     depth = models.CharField(max_length=254, null=True, blank=True)
-    sale_discount = models.IntegerField('85', blank=True, default=0)
+    sale_discount = models.IntegerField(blank=True, default=0)
 
     def __str__(self):
         return self.name
