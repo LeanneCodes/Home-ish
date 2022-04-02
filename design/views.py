@@ -28,6 +28,7 @@ def design(request):
         form = AppointmentForm
         context = {
             "form": form,
+            'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
         }
 
     return render(request, 'design/design.html', context)
@@ -36,7 +37,10 @@ def design(request):
 def design_show(request):
     """ A view that shows all bookings made by that user """
     items = request.user.hiuser.all()
-    context = {"items": items}
+    context = {
+        "items": items,
+        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+    }
 
     return render(request, 'design/design_show.html', context)
 
@@ -61,6 +65,7 @@ def design_update(request, item_id):
     form = AppointmentForm
     context = {
         "form": form,
+        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
     }
 
     return render(request, 'design/design_update.html', context)

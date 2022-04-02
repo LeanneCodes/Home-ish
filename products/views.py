@@ -56,6 +56,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
     }
 
     return render(request, 'products/products.html', context)
@@ -66,9 +67,15 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    context = {
-        'product': product,
-    }
+    if request.user.is_superuser:
+        context = {
+            'product': product,
+            'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        }
+    else:
+        context = {
+            'product': product,
+        }
 
     return render(request, 'products/product_detail.html', context)
 

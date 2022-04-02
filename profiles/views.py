@@ -28,7 +28,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
     }
 
     return render(request, template, context)
@@ -46,6 +46,7 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
+        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
     }
 
     return render(request, template, context)
