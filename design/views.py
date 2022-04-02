@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Appointment, Location, User
-from .forms import AppointmentForm, LocationForm
+from .models import Appointment, Designer, User
+from .forms import AppointmentForm, DesignerForm
 from django_countries.fields import CountryField
 
 # Create your views here.

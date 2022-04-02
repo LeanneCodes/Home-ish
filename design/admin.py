@@ -1,20 +1,20 @@
 from django.contrib import admin
-from .models import Location, Appointment
+from .models import Designer, Appointment
 from django_countries.fields import CountryField
 
 
-@admin.register(Location)
-class LocationAdmin(admin.ModelAdmin):
-    list_display = ("store_locator", "designer")
-    search_fields = ["store_locator", "designer"]
+@admin.register(Designer)
+class DesignerAdmin(admin.ModelAdmin):
+    list_display = ("designer",)
+    search_fields = ["designer"]
 
 
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("location",)}
-    list_filter = ("date", "location")
+    prepopulated_fields = {"slug": ("designer",)}
+    list_filter = ("date", "designer")
     list_display = (
-        "location",
+        "designer",
         "user_email",
         "first_name",
         "last_name",

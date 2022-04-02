@@ -5,12 +5,11 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 
 
-class Location(models.Model):
-    store_locator = CountryField(blank_label='Country *', null=False, blank=False)
+class Designer(models.Model):
     designer = models.CharField(primary_key=True, max_length=30)
 
     class Meta:
-        ordering = ["store_locator"]
+        ordering = ["designer"]
 
     def __str__(self):
         return self.designer
@@ -55,7 +54,7 @@ class Appointment(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
-    location = models.ForeignKey("Location", null=True, on_delete=models.CASCADE)
+    designer = models.ForeignKey("Designer", null=True, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=250, unique=False)
 
     class Meta:
