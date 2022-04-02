@@ -139,23 +139,3 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
-
-
-@login_required
-def wishlist(request):
-    new = Product.category.filter(wishlists=request.user)
-
-    context = {
-        'new': new,
-    }
-    return render(request, 'wishlist/wishlist.html', context)
-
-
-@login_required
-def wishlist_add(request, id):
-    product = get_object_or_404(Product, id=id)
-    if product.wishlists.filter(id=request.user.id).exists():
-        product.wishlists.remove(request.user)
-    else:
-        product.wishlists.add(request.user)
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])

@@ -10,7 +10,7 @@ class Category(models.Model):
 
     name = models.CharField(max_length=254)
     website_name = models.CharField(max_length=254, null=True, blank=True)
-    category2 = models.IntegerField(null=True, blank=True, default=0)
+    category2 = models.CharField(max_length=254, null=True, blank=True)
     category_image = models.ImageField(null=True, blank=True)
     category_image_url = models.URLField(max_length=1024, null=True, blank=True)
 
@@ -23,7 +23,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    category2 = models.IntegerField(null=True, blank=True, default=0)
+    category2 = models.CharField(max_length=254, null=True, blank=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -34,15 +34,13 @@ class Product(models.Model):
     width = models.CharField(max_length=254, null=True, blank=True)
     height = models.CharField(max_length=254, null=True, blank=True)
     depth = models.CharField(max_length=254, null=True, blank=True)
-    sale = models.IntegerField('85', blank=True, default=0)
-    wishlists = models.ManyToManyField(User, blank=True, default=None, related_name="wishlist")
+    sale_discount = models.IntegerField('85', blank=True, default=0)
 
     def __str__(self):
         return self.name
 
 
-    def get_sale(self):
+    def get_sale_discount(self):
         """ Calculate cost with the discount """
         price = int(self.price * (100 - 15) / 100)
         return price
-

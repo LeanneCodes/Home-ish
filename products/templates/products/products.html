@@ -71,9 +71,9 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div>
                                         <div>
-                                            {% if product.category2 == 10 %}
+                                            {% if product.category2 == "sale" %}
                                             <p class="lead mb-0 text-left" style="margin: 0; display: inline; float: left; color: rgba(161, 159, 159, 0.959);"><s>£{{ product.price }}</s>&nbsp;</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.get_sale }}.00</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.get_sale_discount }}.00</p>
                                             {% else %}
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                             {% endif %}
@@ -91,16 +91,16 @@
                                             {% else %}
                                                 <small class="text-muted mb-3">No Rating</small>
                                             {% endif %}
-                                            {% if product.category2 == 9 %}
-                                            <p>
-                                                <button class="new">
-                                                    <a href="{% url 'products' %}?category=new_arrivals">New</a>
-                                                </button>
-                                            </p>
-                                            {% elif product.category2 == 10 %}
+                                            {% if product.category2 == "sale" %}
                                             <p>
                                                 <button class="sale">
                                                     <a href="{% url 'products' %}?category=sale">Sale</a>
+                                                </button>
+                                            </p>
+                                            {% elif product.category2 == "new_arrivals" %}
+                                            <p>
+                                                <button class="new">
+                                                    <a href="{% url 'products' %}?category=new_arrivals">New</a>
                                                 </button>
                                             </p>
                                             {% endif %}
