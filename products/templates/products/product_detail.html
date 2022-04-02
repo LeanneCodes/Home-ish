@@ -49,15 +49,11 @@
                     {% endif %}
                     {% if product.category2 == "sale" %}
                     <p>
-                        <button class="sale">
-                            <a href="{% url 'products' %}?category=sale">Sale</a>
-                        </button>
+                        <span class="sale" style="color: white; padding: 2px 10px;">Sale</span>
                     </p>
                     {% elif product.category2 == "new_arrivals" %}
                     <p>
-                        <button class="new">
-                            <a href="{% url 'products' %}?category=new_arrivals">New</a>
-                        </button>
+                        <span class="new" style="color: white; padding: 2px 10px;">New</span>
                     </p>
                     {% endif %}
                     {% if request.user.is_superuser %}
