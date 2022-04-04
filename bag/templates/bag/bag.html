@@ -101,7 +101,7 @@
                                     <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if total < minimum_spend_threshold %}
                                         <p class="mb-1 text-info">
-                                            You could get £50 off and free delivery by spending <strong>£{{ more_spend }}</strong> more!
+                                            You could get £50 off and free delivery by spending <strong>£{{ more_spend|floatformat:2 }}</strong> more!
                                         </p>
                                     {% else %}
                                         <p class="mb-1 text-success">

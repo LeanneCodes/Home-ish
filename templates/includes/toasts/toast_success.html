@@ -41,7 +41,7 @@
                     </p></strong>
                     {% if total < 350 %}
                         <p class="mb-0 p-2 text-info text-center">
-                            Spend <strong>£{{ more_spend }}</strong> more to get £50 off!
+                            Spend <strong>£{{ more_spend|floatformat:2 }}</strong> more to get £50 off and free delivery!
                         </p>
                     {% endif %}
                     <a href="{% url 'view_bag' %}" class="btn btn-green btn-block">
