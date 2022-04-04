@@ -40,7 +40,7 @@ class Product(models.Model):
     width = models.CharField(max_length=254, null=True, blank=True)
     height = models.CharField(max_length=254, null=True, blank=True)
     depth = models.CharField(max_length=254, null=True, blank=True)
-    sale_discount = models.IntegerField(blank=True, default=0)
+    sale_discount = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name
@@ -48,5 +48,5 @@ class Product(models.Model):
 
     def get_sale_discount(self):
         """ Calculate cost with the discount """
-        price = int(self.price * (100 - 15) / 100)
+        price = (self.price * (100 - 15) / 100)
         return price
