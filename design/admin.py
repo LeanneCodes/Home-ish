@@ -11,7 +11,6 @@ class DesignerAdmin(admin.ModelAdmin):
 
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("designer",)}
     list_filter = ("date", "designer")
     list_display = (
         "designer",
@@ -19,7 +18,6 @@ class AppointmentAdmin(admin.ModelAdmin):
         "first_name",
         "last_name",
         "age",
-        "gender",
         "date",
         "time",
     )

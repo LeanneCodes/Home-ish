@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import Appointment, Designer, User
 from .forms import AppointmentForm, DesignerForm
@@ -7,74 +7,64 @@ from django_countries.fields import CountryField
 # Create your views here.
 
 
-def design(request):
+def appointment_add(request):
     """ A view that shows a booking option """
-    if request.method == "POST":
+    if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():
-            form.instance.user = request.user
             form.save()
-            messages.success(request, "Your appointment was created successfully!")
-            return redirect("design_show")
+            messages.success(request, 'Successfully made appointment!')
+            return redirect(reverse('appointment_add'))
         else:
-            messages.warning(
-                request,
-                "Appointment was not successful. "
-                "Check date or time chosen is not in the past. "
-                "Please ensure all fields have valid inputs.",
-            )
-            return redirect("design")
+            messages.error(request, 'Booking unsuccessful. Appointment did not go through!')
     else:
-        form = AppointmentForm
-        context = {
-            "form": form,
-            'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
-        }
+        form = AppointmentForm()
 
-    return render(request, 'design/design.html', context)
-
-
-def design_show(request):
-    """ A view that shows all bookings made by that user """
-    items = request.user.hiuser.all()
+    template = 'design/appointment_add.html'
     context = {
-        "items": items,
-        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        'form': form,
     }
 
-    return render(request, 'design/design_show.html', context)
+    return render(request, template, context)
 
 
-def design_update(request, item_id):
-    """ A view that shows an option to update the booking """
-    schedule = get_object_or_404(Appointment, id=item_id)
+def appointment_update(request, appointment_id):
+    appointment = get_object_or_404(Appointment, pk=appointment_id)
     if request.method == "POST":
-        form = AppointmentForm(request.POST, instance=schedule)
+        form = AppointmentForm(request.POST, instance=appointment)
         if form.is_valid():
-            form.instance.user = request.user
             form.save()
-            messages.success(request, "Your appointment was updated successfully!")
-            return redirect("design_show")
+            messages.success(request, 'Successfully updated appointment!')
+            return redirect(reverse('appointment_show'))
         else:
-            messages.warning(
-                request,
-                "Appointment was not updated. "
-                "Check date or time chosen is not in the past. "
-                "Please ensure all fields have valid inputs.",
-            )
-    form = AppointmentForm
+            messages.error(request, 'Failed to update appointment. Please ensure all fields are valid!')
+    else:
+        form = AppointmentForm(instance=appointment)
+        messages.info(request, f'You are amending appointment {appointment_id}')
+
+    template = 'design/appointment_update.html'
     context = {
-        "form": form,
+        'form': form,
+        'appointment': appointment,
+    }
+
+    return render(request, template, context)
+
+
+def appointment_show(request):
+    """ A view that shows all bookings made by that user """
+    appointments = request.user.hiuser.all()
+    template = 'design/appointment_show.html'
+    context = {
+        "appointments": appointments,
         'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
     }
 
-    return render(request, 'design/design_update.html', context)
+    return render(request, template, context)
 
 
-def design_delete(request, item_id):
-    schedule = get_object_or_404(Appointment, id=item_id)
-    if schedule.delete():
-        messages.success(request, "Your appointment was deleted successfully!")
-        return redirect("design_show")
-    else:
-        messages.warning(request, "Appointment was not deleted.")
+def appointment_delete(request, appointment_id):
+    appointment = get_object_or_404(Appointment, pk=appointment_id)
+    appointment.delete()
+    messages.success(request, 'Appointment deleted successfully!')
+    return redirect(reverse('appointment_show'))

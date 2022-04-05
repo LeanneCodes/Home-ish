@@ -30,7 +30,22 @@
         <h5 class="text-center">Make an appointment today!</h5>
     </div>
 
-    <div class="col">
+    <div class="container-fluid mt-5" style="max-width: 60%; margin: auto;">
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="{% url 'appointment_add' %}" class="form mb-2">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center mt-5">
+                        <a class="btn btn-outline-green" href="{% url 'home' %}">Cancel</a>
+                        <button class="btn btn-green" type="submit">Make Appointment</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+
+    <!-- <div class="col">
         <p class="text-muted text-center">Please fill out the form below to book your in-home appointment</p>
         <form action="#" method="POST" style="max-width: 60%; margin: auto;">
             {% csrf_token %}
@@ -78,5 +93,5 @@
                 <input type="submit" id="submit" class="submit-btn btn btn-outline-green" value="Book Now">
             </div>
         </form>
-    </div>
+    </div> -->
 {% endblock %}

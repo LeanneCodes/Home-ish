@@ -82,8 +82,7 @@
                 </div>
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                <a href="{% url 'design' %}" class="dropdown-item">Book a Design Appointment</a>
-                <a href="{% url 'design_show' %}" class="dropdown-item">Your Appointments</a>
+                <a href="{% url 'appointment_add' %}" class="dropdown-item">Book a Design Appointment</a>
               </div>
             </li>
             {% endif %}
@@ -209,7 +208,7 @@
 							<div class="col-md-4 mb-md-0 mb-4">
 								<h2 class="footer-heading">Home(ish) Services</h2>
 								<ul class="list-unstyled">
-		              <li><a href="{% url 'design' %}" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Home(ish) Designs</a></li>
+		              <li><a href="{% url 'appointment_add' %}" class="py-1 d-block"><span class="ion-ios-checkmark-circle-outline mr-2"></span>Home(ish) Designs</a></li>
 		            </ul>
 							</div>
 							<div class="col-md-4 mb-md-0 mb-4">

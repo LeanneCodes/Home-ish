@@ -35,7 +35,7 @@
         {% if request.user.is_authenticated %}
         <div class="text-center">
             <button class="btn btn-green">
-                <a style="color: white !important; text-decoration: none !important;" href="{% url 'design' %}">Make an appointment</a>
+                <a style="color: white !important; text-decoration: none !important;" href="{% url 'appointment_add' %}">Make an appointment</a>
             </button>
         </div>
         {% else %}

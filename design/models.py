@@ -32,8 +32,6 @@ class Appointment(models.Model):
         ("21:00", "21:00"),
     ]
 
-    GENDER = [("Woman", "Woman"), ("Man", "Man"), ("Other", "Other")]
-
     user = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE,
         related_name="hiuser"
@@ -41,7 +39,6 @@ class Appointment(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     age = models.IntegerField(blank=False, null=False)
-    gender = models.CharField(max_length=6, choices=GENDER)
     user_email = models.EmailField(max_length=254)
     user_phone = models.CharField(max_length=11)
     date = models.DateField(
@@ -55,7 +52,6 @@ class Appointment(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     designer = models.ForeignKey("Designer", null=True, on_delete=models.CASCADE)
-    slug = models.SlugField(max_length=250, unique=False)
 
     class Meta:
         ordering = ["date"]

@@ -30,19 +30,19 @@
     <br>
     <br>
     
-    {% if items %}
+    {% if appointments %}
     <div>
         <h5 class="text-center">Your appointment(s) below</h5>
     </div>
     <br>
-        {% for item in items %}
+        {% for appointment in appointments %}
         <div style="margin: auto; border: #448070 1px solid;" class="card w-50">
             <div class="card-body text-center">
-                <h5 class="card-title">You chose <strong style="color: #448070 !important;">{{ item.designer }}</strong> for your appointment</h5>
-                <p class="card-text">Time: {{ item.time }}</p>
-                <p class="card-text">Date: {{ item.date }}</p>
-                <p class="card-text">Visiting you at:<br>{{ item.street_address1 }}, {{ item.street_address2 }}<br>{{ item.town_or_city}}, {{ item.county }},<br>{{ item.postcode }},<br>{{ item.country }}</p>
-                <a class="btn btn-outline-green btn-sm" href="/design/design_update/{{ item.id }}"><i class="fa fa-edit"></i> Edit</a>
+                <h5 class="card-title">You chose <strong style="color: #448070 !important;">{{ appointment.designer }}</strong> for your appointment</h5>
+                <p class="card-text">Time: {{ appointment.time }}</p>
+                <p class="card-text">Date: {{ appointment.date }}</p>
+                <p class="card-text">Visiting you at:<br>{{ appointment.street_address1 }}, {{ appointment.street_address2 }}<br>{{ appointment.town_or_city}}, {{ appointment.county }},<br>{{ appointment.postcode }},<br>{{ appointment.country }}</p>
+                <a class="btn btn-outline-green btn-sm" href="/design/update/{{ appointment.id }}"><i class="fa fa-edit"></i> Edit</a>
                 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
@@ -61,12 +61,12 @@
                             </div>
                             <div class="modal-body">
                                 <p class="text-danger">Are you sure you want to delete this appointment?</p>
-                                <p class="card-text">Appointment: {{ item.date }} for {{ item.time }} </p>
-                                <p class="card-text">Location:<br>{{ item.street_address1 }}, {{ item.street_address2 }}<br>{{ item.town_or_city}}, {{ item.county }},<br>{{ item.postcode }},<br>{{ item.country }}</p>
+                                <p class="card-text">Appointment: {{ appointment.date }} for {{ appointment.time }} </p>
+                                <p class="card-text">Location:<br>{{ appointment.street_address1 }}, {{ appointment.street_address2 }}<br>{{ appointment.town_or_city}}, {{ appointment.county }},<br>{{ appointment.postcode }},<br>{{ appointment.country }}</p>
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a href="/design/design_delete/{{ item.id }}" class="btn btn-green">Yes, Delete</a>
+                            <a href="/design/delete/{{ appointment.id }}" class="btn btn-green">Yes, Delete</a>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
     {% else %}
         <p class="lead mb-4 text-center">You currently have no appointments!</p>
         <div class="text-center">
-            <a href="{% url 'design' %}" class="btn btn-green">Book an Appointment</a>
+            <a href="{% url 'appointment_add' %}" class="btn btn-green">Make an Appointment</a>
         </div>
     {% endif %}
     <br>

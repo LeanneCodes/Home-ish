@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import ModelForm
 from .models import Appointment, Designer
 
 # The fields available to iterate through in the user interface
@@ -24,6 +23,17 @@ class AppointmentForm(forms.ModelForm):
             "country",
             "designer",
         ]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black'
+
+
+widgets = {
+        'date': forms.TextInput(attrs={'type': 'date'})
+
+    }
 
 
 class DesignerForm(forms.ModelForm):
