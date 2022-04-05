@@ -31,9 +31,9 @@
                     <p class="mb-0">{{ product.name }}</p>
                     {% if product.category2 == "sale" %}
                         <p class="lead mb-0 text-left" style="margin: 0; display: inline; float: left; color: rgba(161, 159, 159, 0.959);"><s>£{{ product.price }}</s>&nbsp;</p>
-                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.get_sale_discount|floatformat:2 }}</p>
+                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.currentprice }}</p>
                     {% else %}
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.currentprice }}</p>
                     {% endif %}
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
