@@ -91,8 +91,11 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            if product.price <= product.currentprice and product.category2 == "sale":
+                messages.error(request, 'Failed to update product. For sale items, please ensure the original price is not lower than the current price.')
+            else:
+                messages.success(request, 'Successfully added product!')
+                return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -117,9 +120,12 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            if product.price <= product.currentprice and product.category2 == "sale":
+                messages.error(request, 'Failed to update product. For sale items, please ensure the original price is not lower than the current price.')
+            else:
+                form.save()
+                messages.success(request, 'Successfully updated product!')
+                return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:

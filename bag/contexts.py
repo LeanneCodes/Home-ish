@@ -15,10 +15,7 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
-        if product.category2 == "sale":
-            total += quantity * product.price * Decimal(0.85)
-        else:
-            total += quantity * product.price
+        total += quantity * product.currentprice
         product_count += quantity
         bag_items.append({
             'item_id': item_id,
