@@ -34,6 +34,10 @@ body {
     padding: 0.5rem 0.72rem !important;
 }
 
+.navbar {
+    padding: 16px 2px !important
+}
+
 .border-gold {
     color: #bea06a;
 }
@@ -81,11 +85,17 @@ body {
     color: black;
 }
 
-.jumbotron-hero {
+#hero-image {
     background-image: url("/media/homeish.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    min-height: 844px;
+    height: 60vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .centered-div {
@@ -382,16 +392,8 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
-/* Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
-
-  /* Allauth form formatting */
+/* Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -522,15 +524,6 @@ input[name='q']::placeholder {
     width: 360%;
     background: #007bff;
 }
-
-@media (max-width: 767.98px) {
-    .aside-stretch {
-        background: transparent; }
-    .aside-stretch:after {
-        background: transparent;
-        display: none;
-    }
-}
   
 .aside-stretch-right {
     background: #007bff;
@@ -544,17 +537,6 @@ input[name='q']::placeholder {
     content: '';
     width: 360%;
     background: #007bff;
-}
-
-@media (max-width: 767.98px) {
-    .aside-stretch-right {
-        background: transparent;
-    }
-
-    .aside-stretch-right:after {
-        background: transparent;
-        display: none;
-    }
 }
   
 .ftco-section {
@@ -714,15 +696,12 @@ footer {
     background: #372f42;
 }
 
-@media screen and (max-width:500px) {
-    .gallery-container {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .w-1,.w-2,.w-3,.w-4 {
-        grid-column: span 1;
-    }
-    .h-1,.h-2,.h-3 {
-        grid-row: span 1;
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
     }
 }
   
@@ -752,3 +731,34 @@ footer {
     }
 }
 
+@media (max-width: 767.98px) {
+    .aside-stretch-right {
+        background: transparent;
+    }
+
+    .aside-stretch-right:after {
+        background: transparent;
+        display: none;
+    }
+
+    .aside-stretch {
+        background: transparent;
+    }
+
+    .aside-stretch:after {
+        background: transparent;
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .gallery-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4 {
+        grid-column: span 1;
+    }
+    .h-1,.h-2,.h-3 {
+        grid-row: span 1;
+    }
+}
