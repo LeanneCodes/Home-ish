@@ -33,7 +33,7 @@
     <div class="container-fluid mt-5" style="max-width: 60%; margin: auto;">
         <div class="row">
             <div class="col">
-                <form method="POST" action="{% url 'appointment_add' %}" class="form mb-2">
+                <form method="POST" action="#" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-center mt-5">
@@ -45,53 +45,4 @@
         </div>
     </div>
 
-    <!-- <div class="col">
-        <p class="text-muted text-center">Please fill out the form below to book your in-home appointment</p>
-        <form action="#" method="POST" style="max-width: 60%; margin: auto;">
-            {% csrf_token %}
-            <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
-                <legend class="fieldset-label small text-black px-2 w-auto">Choose Your Designer</legend>
-                {% render_field form.designer class="form-control" placeholder="Choose Your Designer" %}
-                <br>
-            </fieldset>
-            <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
-                <legend class="fieldset-label small text-black px-2 w-auto">Your Details</legend>
-                {% render_field form.first_name class="form-control" placeholder="First Name" %}
-                <br>
-                {% render_field form.last_name class="form-control" placeholder="Last Name" %}
-                <br>
-                {% render_field form.user_email class="form-control" placeholder="Email Address" %}
-                <br>
-                {% render_field form.user_phone class="form-control" placeholder="Mobile" minlength="11" %}
-                <br>
-                {% render_field form.age class="form-control" min="18" max="100" placeholder="Age" %}
-                <br>
-            </fieldset>
-            <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
-                <legend class="fieldset-label small text-black px-2 w-auto">Your Address</legend>
-                {% render_field form.street_address1 class="form-control" placeholder="Street Address 1" %}
-                <br>
-                {% render_field form.street_address2 class="form-control" placeholder="Street Address 2" %}
-                <br>
-                {% render_field form.town_or_city class="form-control" placeholder="Town or City" %}
-                <br>
-                {% render_field form.county class="form-control" placeholder="County" %}
-                <br>
-                {% render_field form.postcode class="form-control" placeholder="Postcode" %}
-                <br>
-                {% render_field form.country class="form-control" placeholder="Country" %}
-                <br>
-            </fieldset>
-            <fieldset class="rounded px-3 mb-5" style="border: #448070 1px solid;">
-                <legend class="fieldset-label small text-black px-2 w-auto">Appointment Slot</legend>
-                {% render_field form.date class="form-control" type="date" %}
-                <br>
-                {% render_field form.time class="form-control" %}
-                <br>
-            </fieldset>
-            <div class="text-center">
-                <input type="submit" id="submit" class="submit-btn btn btn-outline-green" value="Book Now">
-            </div>
-        </form>
-    </div> -->
 {% endblock %}

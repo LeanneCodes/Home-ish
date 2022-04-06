@@ -45,12 +45,12 @@
                 <a class="btn btn-outline-green btn-sm" href="/design/update/{{ appointment.id }}"><i class="fa fa-edit"></i> Edit</a>
                 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal-{{appointment.id}}">
                     <i class="fa fa-trash"></i> Delete
                 </button>
                     
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal-{{appointment.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">

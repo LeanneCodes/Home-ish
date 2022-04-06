@@ -12,9 +12,10 @@ def appointment_add(request):
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():
+            form.instance.user = request.user
             form.save()
             messages.success(request, 'Successfully made appointment!')
-            return redirect(reverse('appointment_add'))
+            return redirect(reverse('appointment_show'))
         else:
             messages.error(request, 'Booking unsuccessful. Appointment did not go through!')
     else:
