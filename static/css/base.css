@@ -86,7 +86,7 @@ body {
 }
 
 #hero-image {
-    background-image: url("/media/homeish.png");
+    background-image: url("/media/homeish-2560.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -119,9 +119,9 @@ body {
 }
 
 .jumbotron-news {
-    background-image: url("/media/white-chair.png");
+    background-image: url("/media/white-chair-2560.png");
     background-size: cover;
-    min-height: 550px;
+    min-height: 600px;
     position: relative;
   }
 
@@ -699,9 +699,57 @@ footer {
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
+@media (max-width: 1920px) {
+    .jumbotron-news {
+        background-image: url("/media/white-chair-1920.png");
+    }
+}
+
+@media (max-width: 1440px) {
+    #hero-image {
+        background-image: url("/media/homeish-1440.png");
+    }
+
+    #green-sofa {
+        background-image: url("/media/green-sofa-1440.png");
+        background-repeat: no-repeat !important;
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        max-width: auto;
+        height: 820px;
+    }
+    
+    .jumbotron-news {
+        background-image: url("/media/white-chair-1440.png");
+    }
+}
+
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero-image {
+        background-image: url("/media/homeish-1024.png");
+    }
+
+    .jumbotron-news {
+        background-image: url("/media/white-chair-1024.png");
+      }
+
+    #green-sofa {
+        max-width: 930px;
+        height: auto;
+    }
+
+    #decor2, #decor3 {
+        display: none;
+    }
+
+    #decor1, #decor4 {
+        grid-column: span 2;
     }
 }
   
@@ -731,7 +779,7 @@ footer {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .aside-stretch-right {
         background: transparent;
     }
@@ -749,16 +797,85 @@ footer {
         background: transparent;
         display: none;
     }
+
+    .header-container {
+        padding-top: 80px;
+    }
+
+    body {
+        height: calc(100vh - 80px);
+    }
+
+    #hero-image {
+        background-image: url("/media/homeish-768.png");
+    }
+
+    #green-sofa {
+        max-width: 690px;
+        height: auto;
+    }
+
+    .jumbotron-news {
+        background-image: url("/media/white-chair-768.png");
+    }
 }
 
-@media screen and (max-width:500px) {
-    .gallery-container {
-        grid-template-columns: repeat(2,1fr);
+@media screen and (max-width: 500px) {
+    #decor4, #decor3, #decor2 {
+        display: none;
     }
-    .w-1,.w-2,.w-3,.w-4 {
-        grid-column: span 1;
+
+    #decor1 {
+        grid-column: span 4;
     }
-    .h-1,.h-2,.h-3 {
-        grid-row: span 1;
+
+    #hero-image {
+        background-image: url("/media/orange-sofa-500.png");
+        opacity: 0.8;
+    }
+
+    .callout {
+        color: white !important;
+    }
+
+    #green-sofa {
+        max-width: 470px;
+        height: auto;
+    }
+
+    .jumbotron-news {
+        background-image: url("/media/white-chair-500.png");
+    }
+}
+
+@media (max-width: 425px) {
+    #green-sofa {
+        max-width: 395px;
+        height: auto;
+    }
+
+    .jumbotron-news {
+        background-image: url("/media/white-chair-425.png");
+    }
+
+    #hero-image {
+        background-image: url("/media/orange-sofa-425.png");
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 320px) {
+    #green-sofa {
+        max-width: 290px;
+        height: auto;
+    }
+
+    .jumbotron-news {
+        background-image: url("/media/white-chair-320.png");
+    }
+
+    #hero-image {
+        background-image: url("/media/orange-sofa-320.png");
+        opacity: 0.8;
     }
 }
