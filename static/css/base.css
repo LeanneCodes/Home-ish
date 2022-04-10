@@ -703,6 +703,10 @@ footer {
     .jumbotron-news {
         background-image: url("/media/white-chair-1920.png");
     }
+
+    #hero-image {
+        background-image: url("/media/homeish-1920.png");
+    }
 }
 
 @media (max-width: 1440px) {
