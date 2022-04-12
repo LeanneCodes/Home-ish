@@ -1,0 +1,1 @@
+web: gunicorn home_ish.wsgi:application
