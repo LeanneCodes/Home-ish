@@ -7,9 +7,9 @@
 
 {% block inner_content %}
 
-<div class="jumbotron jumbotron-fluid jumbotron-category mb-0" style="margin-top: 10rem !important;">
+<div class="jumbotron jumbotron-fluid jumbotron-category auth-category mb-0" style="margin-top: 9rem;">
   <div class="container">
-      <h1 class="display-4 text-center" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Sign In" %}</h1>
+      <h1 class="display-4 text-center sm-category-name" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Sign In" %}</h1>
   </div>
 </div>
 <br>
@@ -35,7 +35,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% include "socialaccount/snippets/login_extra.html" %}
 
 {% else %}
-<p class="text-center">{% blocktrans %}If you have not created an account yet, then please
+<p class="text-center mt-5 pr-5 pl-5">{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 

@@ -5,15 +5,15 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
-<div class="jumbotron jumbotron-fluid jumbotron-category mb-0" style="margin-top: 10rem !important;">
+<div class="jumbotron jumbotron-fluid jumbotron-category auth-category mb-0" style="margin-top: 9rem;">
   <div class="container">
-      <h1 class="display-4 text-center" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Sign Out" %}</h1>
+      <h1 class="display-4 text-center sm-category-name" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">{% trans "Sign Out" %}</h1>
   </div>
 </div>
 <br>
 <br>
 <div>
-  <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
+  <p class="text-center mt-5 pr-5 pl-5">{% trans 'Are you sure you want to sign out?' %}</p>
   <form class="text-center" method="post" action="{% url 'account_logout' %}">
     {% csrf_token %}
     {% if redirect_field_value %}

@@ -96,6 +96,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .centered-div {
@@ -811,6 +812,10 @@ footer {
     .brand-name {
         margin-top: 6px !important;
     }
+
+    .auth-category {
+        margin-top: 6rem !important;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -835,6 +840,7 @@ footer {
     #hero-image {
         background-image: url("/media/orange-sofa-500.png");
         opacity: 0.8;
+        margin-top: 40px;
     }
 
     .jumbotron-news {
@@ -847,6 +853,10 @@ footer {
     
     .sm-category-name {
         color: white !important;
+    }
+
+    .auth-category {
+        margin-top: 7rem !important;
     }
 }
 
@@ -871,6 +881,12 @@ footer {
     }
 }
 
+@media (max-width: 375px) {
+    #hero-image {
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 320px) {
     .jumbotron-news {
         background-image: url("/media/white-chair-320.png");
@@ -879,6 +895,7 @@ footer {
     #hero-image {
         background-image: url("/media/orange-sofa-320.png");
         opacity: 0.8;
+        margin-top: 80px;
     }
 
     .product-container {
@@ -896,5 +913,9 @@ footer {
 
     .contact-container {
         margin-top: 100px !important;
+    }
+
+    .auth-category {
+        margin-top: 10rem !important;
     }
 }
