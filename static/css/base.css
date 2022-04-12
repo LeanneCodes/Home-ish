@@ -867,6 +867,10 @@ footer {
         width: 80% !important;
         padding: 0;
     }
+
+    .bag-total-headline {
+        margin-top:-35px !important;
+    }
 }
 
 @media (max-width: 425px) {
@@ -901,6 +905,10 @@ footer {
 
     .jumbotron-category {
         margin-top: 80px;
+    }
+
+    .prod-detail {
+        margin-top: 48px;
     }
 }
 
@@ -939,5 +947,13 @@ footer {
     .design-heading {
         margin-top: 58px;
         padding: 0px 20px;
+    }
+
+    .bag-heading {
+        margin-top: 55px;
+    }
+
+    .bag-total-headline {
+        margin-top: 35px !important;
     }
 }

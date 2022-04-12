@@ -1,0 +1,15 @@
+<div class="bag-total-headline">
+    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
+    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+    <h6>Discount Awarded: £{{ discount_delta|floatformat:2 }}</h6>
+    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+</div>
+{% if total < minimum_spend_threshold %}
+    <p class="mb-1 text-info">
+        You could get £50 off and free delivery by spending <strong>£{{ more_spend|floatformat:2 }}</strong> more!
+    </p>
+{% else %}
+    <p class="mb-1 text-success">
+        Free delivery and discount applied!
+    </p>
+{% endif %}

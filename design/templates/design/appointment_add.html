@@ -37,8 +37,8 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-center mt-5">
-                        <a class="btn btn-outline-green" href="{% url 'home' %}">Cancel</a>
-                        <button class="btn btn-green" type="submit">Make Appointment</button>
+                        <a class="btn btn-outline-green mt-3" href="{% url 'home' %}">Cancel</a>
+                        <button class="btn btn-green mt-3" type="submit">Make Appointment</button>
                     </div>
                 </form>
             </div>            

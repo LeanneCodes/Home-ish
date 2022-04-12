@@ -17,7 +17,7 @@
             <div class="col text-center pr-0 pl-0">
                 <div class="jumbotron jumbotron-fluid jumbotron-category mb-0">
                     <div class="container">
-                        <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Shopping Cart</h1>
+                        <h1 class="display-4 sm-category-name" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Shopping Cart</h1>
                     </div>
                 </div>
                 <br>
@@ -25,11 +25,48 @@
             </div>
         </div>
     </div>
+
     <div class="container mb-2">
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive rounded">
+                    <div class="d-block d-md-none">
+                        <div class="row">
+                            <div class="col">
+                                {% include "bag/bag-total.html" %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {% include "bag/checkout-buttons.html" %}
+                                <p class="text-muted mt-5 mb-5">A summary of your shopping cart contents is below</p>
+                            </div>
+                        </div>
+                        {% for item in bag_items %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "bag/product-image.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "bag/product-info.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 order-sm-last">
+                                    <p class="my-0">Price Each: £{{ item.product.currentprice }}</p>
+                                    <p><strong>Subtotal: </strong>£{{ item.product.currentprice | calc_subtotal:item.quantity }}</p>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {% include "bag/quantity-form.html" %}
+                                </div>
+                            </div>
+                            <div class="row"><div class="col"><hr></div></div>
+                        {% endfor %}
+                        <div class="btt-button shadow-sm rounded-circle" style="background-color: #3f2a33; border: #3f2a33;">
+                            <a class="btt-link d-flex h-100">
+                                <i class="fas fa-arrow-up mx-auto my-auto" style="color: #f5f5f3;"></i>
+                            </a>	
+                        </div>
+                    </div>
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -111,13 +148,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-green btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-green btn-lg mt-3">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span>Continue Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-green btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-green btn-lg mt-3">
                                         <span>Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -128,7 +165,7 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5 text-center">Your shopping cart is currently empty!</p>
+                    <p class="lead mb-5 text-center bag-heading">Your shopping cart is currently empty!</p>
                     <div class="text-center mx-0">
                         <a href="{% url 'products' %}" class="btn btn-outline-green btn-lg">
                             <span class="icon">
