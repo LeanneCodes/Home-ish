@@ -157,6 +157,9 @@ footer {
 }
 
 /* Products */
+.product-container {
+    top: 50px !important;
+}
 
 .overlay {
 	height: 100%;
@@ -557,6 +560,7 @@ footer {
     position: relative;
     overflow: hidden;
     z-index: 0;
+    top: 30px;
 }
 
 .footer-06:after {
@@ -713,15 +717,6 @@ footer {
     #hero-image {
         background-image: url("/media/homeish-1440.png");
     }
-
-    #green-sofa {
-        background-image: url("/media/green-sofa-1440.png");
-        background-repeat: no-repeat !important;
-        background-position: 50% 50% !important;
-        background-size: cover !important;
-        max-width: auto;
-        height: 820px;
-    }
     
     .jumbotron-news {
         background-image: url("/media/white-chair-1440.png");
@@ -741,11 +736,6 @@ footer {
 
     .jumbotron-news {
         background-image: url("/media/white-chair-1024.png");
-      }
-
-    #green-sofa {
-        max-width: 930px;
-        height: auto;
     }
 
     #decor2, #decor3 {
@@ -814,13 +804,12 @@ footer {
         background-image: url("/media/homeish-768.png");
     }
 
-    #green-sofa {
-        max-width: 690px;
-        height: auto;
-    }
-
     .jumbotron-news {
         background-image: url("/media/white-chair-768.png");
+    }
+
+    .brand-name {
+        margin-top: 6px !important;
     }
 }
 
@@ -833,31 +822,35 @@ footer {
         grid-column: span 4;
     }
 
+    .gallery-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4 {
+        grid-column: span 1;
+    }
+    .h-1,.h-2,.h-3 {
+        grid-row: span 1;
+    }
+
     #hero-image {
         background-image: url("/media/orange-sofa-500.png");
         opacity: 0.8;
     }
 
-    .callout {
-        color: white !important;
-    }
-
-    #green-sofa {
-        max-width: 470px;
-        height: auto;
-    }
-
     .jumbotron-news {
         background-image: url("/media/white-chair-500.png");
+    }
+
+    .jumbotron-category {
+        margin-top: 39px;
+    }
+    
+    .sm-category-name {
+        color: white !important;
     }
 }
 
 @media (max-width: 425px) {
-    #green-sofa {
-        max-width: 395px;
-        height: auto;
-    }
-
     .jumbotron-news {
         background-image: url("/media/white-chair-425.png");
     }
@@ -866,14 +859,19 @@ footer {
         background-image: url("/media/orange-sofa-425.png");
         opacity: 0.8;
     }
+
+    .gallery-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4 {
+        grid-column: span 1;
+    }
+    .h-1,.h-2,.h-3 {
+        grid-row: span 1;
+    }
 }
 
 @media (max-width: 320px) {
-    #green-sofa {
-        max-width: 290px;
-        height: auto;
-    }
-
     .jumbotron-news {
         background-image: url("/media/white-chair-320.png");
     }
@@ -881,5 +879,22 @@ footer {
     #hero-image {
         background-image: url("/media/orange-sofa-320.png");
         opacity: 0.8;
+    }
+
+    .product-container {
+        top: 100px !important;
+    }
+
+    .jumbotron-category {
+        margin-top: 80px;
+        margin-bottom: -70px !important;
+    }
+
+    .decor-headline {
+        margin-top: 55px;
+    }
+
+    .contact-container {
+        margin-top: 100px !important;
     }
 }
