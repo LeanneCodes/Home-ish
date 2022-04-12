@@ -16,6 +16,10 @@ body {
     font-family: 'Homemade Apple', cursive;
 }
 
+.long-title {
+    font-size: 3.5rem;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -858,6 +862,11 @@ footer {
     .auth-category {
         margin-top: 7rem !important;
     }
+
+    .card {
+        width: 80% !important;
+        padding: 0;
+    }
 }
 
 @media (max-width: 425px) {
@@ -883,6 +892,14 @@ footer {
 
 @media (max-width: 375px) {
     #hero-image {
+        margin-top: 80px;
+    }
+
+    .long-title {
+        font-size: 2.5rem !important;
+    }
+
+    .jumbotron-category {
         margin-top: 80px;
     }
 }
@@ -917,5 +934,10 @@ footer {
 
     .auth-category {
         margin-top: 10rem !important;
+    }
+
+    .design-heading {
+        margin-top: 58px;
+        padding: 0px 20px;
     }
 }
