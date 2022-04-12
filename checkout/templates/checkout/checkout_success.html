@@ -20,7 +20,7 @@
             <div class="col text-center pr-0 pl-0">
                 <div class="jumbotron jumbotron-fluid jumbotron-category mb-0">
                     <div class="container">
-                        <h1 class="display-4" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Thank You!</h1>
+                        <h1 class="display-4 sm-category-name" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Thank You!</h1>
                     </div>
                 </div>
                 <br>
@@ -28,11 +28,12 @@
             </div>
         </div>
     </div>
-    <p class="text-black text-center">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+    <p class="text-black text-center success-headline pr-3 pl-3">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
     <br>
+    <hr style="max-width: 50%; margin: auto;">
     <div class="container text-center">
         <div class="row">
-            <div class="col-12 border">
+            <div class="col-12">
                 <br>
                 <div class="row">
                     <div class="col">
@@ -42,7 +43,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <p class="mb-0 text-black">Order Number: {{ order.order_number }}</p>
+                        <p class="mb-0 text-black">Order Number: <span class="small-text" style="color: #448070;">{{ order.order_number }}</span></p>
                     </div>
                 </div>
 

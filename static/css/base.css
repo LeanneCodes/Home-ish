@@ -820,6 +820,11 @@ footer {
     .auth-category {
         margin-top: 6rem !important;
     }
+
+    .checkout-form {
+        margin-top: 30px;
+        padding: 0px 20px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -871,6 +876,10 @@ footer {
     .bag-total-headline {
         margin-top:-35px !important;
     }
+
+    .checkout-headline {
+        margin-top: -35px !important;
+    }
 }
 
 @media (max-width: 425px) {
@@ -909,6 +918,10 @@ footer {
 
     .prod-detail {
         margin-top: 48px;
+    }
+
+    .small-text {
+        font-size: 0.9rem !important;
     }
 }
 
@@ -955,5 +968,13 @@ footer {
 
     .bag-total-headline {
         margin-top: 35px !important;
+    }
+
+    .checkout-headline {
+        margin-top: 35px !important;
+    }
+
+    .success-headline {
+        margin-top: 60px !important;
     }
 }
