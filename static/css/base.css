@@ -712,10 +712,7 @@ footer {
 }
 
 /* Design Form */
-.design-container {
-    max-width: 60%;
-    margin: auto;
-}
+
 
 /* Media Queries */
 
@@ -898,7 +895,7 @@ footer {
     }
 
     .design-container {
-        max-width: 90% !important;
+        max-width: 80% !important;
     }
 }
 
