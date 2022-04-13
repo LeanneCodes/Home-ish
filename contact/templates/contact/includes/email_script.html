@@ -7,10 +7,10 @@
             // these IDs from the previous steps
             emailjs.sendForm('contact_service', 'contact_form', this)
                 .then(function() {
-                    alert('Enquiry has been submitted!');
+                    alert('Message submitted successfully!');
                     console.log('SUCCESS!');
                 }, function(error) {
-                    alert('Enquiry has failed to send. Check all fields have valid inputs.');
+                    alert('Message has failed to send. Check all fields have valid inputs.');
                     console.log('FAILED...', error);
                 });
         });
