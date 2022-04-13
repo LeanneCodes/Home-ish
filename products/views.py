@@ -67,15 +67,9 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    if request.user.is_superuser:
-        context = {
-            'product': product,
-            'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
-        }
-    else:
-        context = {
-            'product': product,
-        }
+    context = {
+        'product': product,
+    }
 
     return render(request, 'products/product_detail.html', context)
 
