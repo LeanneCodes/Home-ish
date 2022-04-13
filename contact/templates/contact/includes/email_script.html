@@ -3,7 +3,7 @@
         emailjs.send("service_9iywhyk","template_n6mc9x8", {
             "from_name": contactForm.name.value,
             "from_email": contactForm.emailaddress.value,
-            "homeish_message": contactForm.homeish.valuec
+            "message": contactForm.message.value,
         })
         .then(
             function(response) {
