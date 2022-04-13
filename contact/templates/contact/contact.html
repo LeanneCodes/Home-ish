@@ -87,7 +87,7 @@
         <br>
         <div class="form-row text-center">
           <div class="col-12">
-            <button type="submit" class="btn btn-outline-green">Send Enquiry</button>
+            <input type="submit" class="btn btn-outline-green" value="Send">
           </div>
         </div>
         <br>
@@ -98,4 +98,5 @@
 {% endblock %}
 
 {% block postloadjs %}
+{% include 'contact/includes/email_script.html' %}
 {% endblock %}

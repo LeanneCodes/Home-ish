@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    function sendMail(contactForm) {
+        emailjs.send("service_9iywhyk","template_n6mc9x8", {
+            "from_name": contactForm.name.value,
+            "from_email": contactForm.emailaddress.value,
+            "homeish_message": contactForm.homeish.valuec
+        })
+        .then(
+            function(response) {
+                alert('Enquiry has been submitted!');
+                console.log("SUCCESS", response);
+            },
+            function(error) {
+                alert('Enquiry has failed to send. Check all fields have valid inputs.');
+                console.log("FAILED", error);
+            }
+        );
+        return false;
+    }
+</script>
