@@ -1,20 +1,18 @@
 <script type="text/javascript">
-    function sendMail(contactForm) {
-        emailjs.send("service_9iywhyk","template_n6mc9x8", {
-            "from_name": contactForm.name.value,
-            "from_email": contactForm.emailaddress.value,
-            "message": contactForm.message.value,
-        })
-        .then(
-            function(response) {
-                alert('Enquiry has been submitted!');
-                console.log("SUCCESS", response);
-            },
-            function(error) {
-                alert('Enquiry has failed to send. Check all fields have valid inputs.');
-                console.log("FAILED", error);
-            }
-        );
-        return false;
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(function() {
+                    alert('Enquiry has been submitted!');
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    alert('Enquiry has failed to send. Check all fields have valid inputs.');
+                    console.log('FAILED...', error);
+                });
+        });
     }
 </script>
