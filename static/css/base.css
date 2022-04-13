@@ -705,6 +705,12 @@ footer {
     background: #372f42;
 }
 
+/* Email */
+.contact-container {
+    max-width: 60%;
+    margin: auto;
+}
+
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -879,6 +885,10 @@ footer {
 
     .checkout-headline {
         margin-top: -35px !important;
+    }
+
+    .contact-container {
+        max-width: 90% !important;
     }
 }
 
