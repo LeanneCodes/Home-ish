@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /products/add/
+Disallow: /products/edit/
+Disallow: /profile/
+Disallow: /design/appointments
+Disallow: /design/update/
+Sitemap: https://homeish.herokuapp.com/sitemap.xml
