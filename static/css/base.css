@@ -711,9 +711,6 @@ footer {
     margin: auto;
 }
 
-/* Design Form */
-
-
 /* Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -993,5 +990,9 @@ footer {
 
     .success-headline {
         margin-top: 60px !important;
+    }
+
+    .contact-headline {
+        margin-top: 35px !important;
     }
 }
