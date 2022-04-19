@@ -706,8 +706,8 @@ footer {
 }
 
 /* Email */
-.contact-container {
-    max-width: 60%;
+.contact-container2 {
+    width: 60%;
     margin: auto;
 }
 
@@ -887,8 +887,8 @@ footer {
         margin-top: -35px !important;
     }
 
-    .contact-container {
-        max-width: 80% !important;
+    .contact-container2 {
+        width: 80% !important;
     }
 
     .design-container {
