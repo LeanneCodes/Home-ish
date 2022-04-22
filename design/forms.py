@@ -39,7 +39,7 @@ class AppointmentForm(forms.ModelForm):
             'user_email': 'Email Address',
             'age': 'Age',
             'user_phone': 'Phone Number',
-            'date': 'YYYY/MM/DD',
+            'date': 'MM/DD/YYYY',
             'time': 'Please select a time',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
