@@ -756,12 +756,6 @@ footer {
     #decor1, #decor4 {
         grid-column: span 2;
     }
-
-    .buffer {
-        margin-top: 7rem !important;
-        max-width: 70% !important;
-        margin: auto !important;
-    }
 }
   
 /* fixed top navbar only on medium and up */
@@ -1000,5 +994,11 @@ footer {
 
     .success-headline {
         margin-top: 60px !important;
+    }
+
+    .buffer {
+        margin-top: 7rem !important;
+        max-width: 70% !important;
+        margin: auto !important;
     }
 }
