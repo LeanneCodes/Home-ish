@@ -1009,4 +1009,8 @@ footer {
         margin-top: 80px !important;
         padding: 0px 10px;
     }
+
+    .del-buffer {
+        margin-top: 50px;
+    }
 }
