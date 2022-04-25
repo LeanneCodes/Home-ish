@@ -1000,4 +1000,8 @@ footer {
     .buffer {
         margin-top: 150px;
     }
+
+    .buffer-small {
+        margin-top: 80px !important;
+    }
 }
