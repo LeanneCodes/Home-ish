@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from .models import Appointment, Designer, User
-from .forms import AppointmentForm, DesignerForm
-from django_countries.fields import CountryField
+from .models import Appointment
+from .forms import AppointmentForm
 
 # Create your views here.
 
@@ -17,7 +16,8 @@ def appointment_add(request):
             messages.success(request, 'Successfully made appointment!')
             return redirect(reverse('appointment_show'))
         else:
-            messages.error(request, 'Booking unsuccessful. Appointment did not go through!')
+            messages.error(request, 'Booking unsuccessful. \
+                Appointment did not go through!')
     else:
         form = AppointmentForm()
 
@@ -38,10 +38,12 @@ def appointment_update(request, appointment_id):
             messages.success(request, 'Successfully updated appointment!')
             return redirect(reverse('appointment_show'))
         else:
-            messages.error(request, 'Failed to update appointment. Please ensure all fields are valid!')
+            messages.error(request, 'Failed to update appointment. \
+                Please ensure all fields are valid!')
     else:
         form = AppointmentForm(instance=appointment)
-        messages.info(request, f'You are amending appointment {appointment_id}')
+        messages.info(request, f'You are amending \
+            appointment {appointment_id}')
 
     template = 'design/appointment_update.html'
     context = {
@@ -58,7 +60,7 @@ def appointment_show(request):
     template = 'design/appointment_show.html'
     context = {
         "appointments": appointments,
-        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        'on_page': True  # prevent showing shopping cart
     }
 
     return render(request, template, context)

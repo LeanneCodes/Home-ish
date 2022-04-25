@@ -66,4 +66,3 @@ class DesignerForm(forms.ModelForm):
         fields = [
             "designer",
         ]
-

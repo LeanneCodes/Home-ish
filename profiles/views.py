@@ -19,7 +19,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request, 'Update failed. Please ensure the form \
+                is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -28,7 +29,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        'on_page': True  # prevents shopping cart from showing
     }
 
     return render(request, template, context)
@@ -46,7 +47,7 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
-        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        'on_page': True  # prevents shopping cart from showing
     }
 
     return render(request, template, context)

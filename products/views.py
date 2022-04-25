@@ -1,4 +1,3 @@
-from django.http.response import HttpResponseRedirect
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -43,10 +42,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any \
+                    search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -56,7 +57,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'on_page': True  # this will be applied to all contexts where we don't want to show what's in the shopping cart
+        'on_page': True  # prevent sopping cart showing
     }
 
     return render(request, 'products/products.html', context)
@@ -85,13 +86,17 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            if product.price <= product.currentprice and product.category2 == "sale":
-                messages.error(request, 'Failed to update product. For sale items, please ensure the original price is not lower than the current price.')
+            if product.price <= (product.currentprice and product.category2
+                                 == "sale"):
+                messages.error(request, 'Failed to update product. For \
+                    sale items, please ensure the original price is not \
+                    lower than the current price.')
             else:
                 messages.success(request, 'Successfully added product!')
                 return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure \
+                the form is valid.')
     else:
         form = ProductForm()
 
@@ -114,14 +119,18 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            if product.price <= product.currentprice and product.category2 == "sale":
-                messages.error(request, 'Failed to update product. For sale items, please ensure the original price is not lower than the current price.')
+            if product.price <= (product.currentprice and product.category2
+                                 == "sale"):
+                messages.error(request, 'Failed to update product. For \
+                    sale items, please ensure the original price is \
+                    not lower than the current price.')
             else:
                 form.save()
                 messages.success(request, 'Successfully updated product!')
                 return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. Please ensure \
+                the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

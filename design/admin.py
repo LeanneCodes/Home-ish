@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Designer, Appointment
-from django_countries.fields import CountryField
 
 
 @admin.register(Designer)
