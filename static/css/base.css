@@ -756,6 +756,11 @@ footer {
     #decor1, #decor4 {
         grid-column: span 2;
     }
+
+    .buffer {
+        max-width: 70% !important;
+        margin: auto !important;
+    }
 }
   
 /* fixed top navbar only on medium and up */
