@@ -165,7 +165,6 @@ footer {
 .buffer {
     margin-top: 100px !important;
     max-width: 70% !important;
-    margin: auto !important;
 }
 
 .product-container {
@@ -1000,5 +999,9 @@ footer {
 
     .success-headline {
         margin-top: 60px !important;
+    }
+
+    .buffer {
+        margin-top: 150px;
     }
 }
