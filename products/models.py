@@ -28,7 +28,7 @@ class Product(models.Model):
         ("new_arrivals", "new_arrivals"),
     ]
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', help_text="Please choose an option from this list except for 'Sale' or 'New Arrivals'", null=True, blank=True, on_delete=models.SET_NULL)
     category2 = models.CharField(max_length=254, help_text="Please choose an option if this item is on sale or a new arrival", null=True, blank=True, choices=PROMO)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
