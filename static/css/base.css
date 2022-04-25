@@ -162,6 +162,12 @@ footer {
 }
 
 /* Products */
+.buffer {
+    margin-top: 100px !important;
+    max-width: 70% !important;
+    margin: auto !important;
+}
+
 .product-container {
     top: 50px !important;
 }
@@ -755,12 +761,6 @@ footer {
 
     #decor1, #decor4 {
         grid-column: span 2;
-    }
-    
-    .buffer {
-        margin-top: 7rem !important;
-        max-width: 70% !important;
-        margin: auto !important;
     }
 }
   
