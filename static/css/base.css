@@ -758,6 +758,7 @@ footer {
     }
 
     .buffer {
+        margin-top: 7rem !important;
         max-width: 70% !important;
         margin: auto !important;
     }
@@ -999,9 +1000,5 @@ footer {
 
     .success-headline {
         margin-top: 60px !important;
-    }
-
-    .buffer {
-        margin-top: 7rem !important;
     }
 }
