@@ -31,3 +31,8 @@ urlpatterns = [
     path('design/', include('design.urls')),
     path('oauth/', include('social_django.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'home_ish.views.custom_page_not_found_view'
+handler500 = 'home_ish.views.custom_error_view'
+handler403 = 'home_ish.views.custom_permission_denied_view'
+handler400 = 'home_ish.views.custom_bad_request_view'
