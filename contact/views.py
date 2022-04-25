@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 
 def contact(request):
-    """ A view that renders contact methods visitors can reach Home(ish) with """
+    # A view that renders contact methods
+    # visitors can reach Home(ish) with
 
     return render(request, 'contact/contact.html')
