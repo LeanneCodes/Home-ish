@@ -946,6 +946,10 @@ footer {
     .title-size {
         font-size: 2.5rem;
     }
+
+    .buffer-small {
+        padding: 0px 10px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -1003,5 +1007,6 @@ footer {
 
     .buffer-small {
         margin-top: 80px !important;
+        padding: 0px 10px;
     }
 }
