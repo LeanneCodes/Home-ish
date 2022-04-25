@@ -995,4 +995,8 @@ footer {
     .success-headline {
         margin-top: 60px !important;
     }
+
+    .buffer {
+        margin-top: 7rem !important;
+    }
 }
