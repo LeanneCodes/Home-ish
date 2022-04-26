@@ -40,17 +40,17 @@ class AppointmentForm(forms.ModelForm):
             'age': 'Age',
             'user_phone': 'Phone Number',
             'date': 'DD/MM/YYYY',
-            'time': '',
+            'time': 'Time',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
             'postcode': 'Postcode',
-            'designer': '',
+            'designer': 'Designer',
         }
 
         for field in self.fields:
-            if field != 'country' or field != 'time' or field != 'designer':
+            if field != 'country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
