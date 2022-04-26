@@ -20,7 +20,7 @@
           @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
         </style>
         <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
+        <style>
           #mc_embed_signup{width:100%;}
         </style>
     {% endblock %}
@@ -36,15 +36,13 @@
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
         <!-- Email JS -->
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
           (function(){
               emailjs.init("Yh1W5Uk6f_--MC1RQ");
           })();
         </script>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     {% endblock %}
 
     {% block extra_js %}
@@ -94,16 +92,16 @@
           </form>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-            <li class="list-inline-item">
+          <div class="list-inline list-unstyled text-center text-lg-right my-0">
+            <span class="list-inline-item">
               <a class="nav-link" href="{% url 'contact' %}">
                 <div class="text-center">
                   <div><i class="fa-solid fa-phone"></i></div>
                 </div>
               </a>
-            </li>
+            </span>
             {% if request.user.is_authenticated %}
-            <li class="list-inline-item">
+            <span class="list-inline-item">
               <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fa-solid fa-compass-drafting"></i></div>
@@ -113,9 +111,9 @@
                 <a href="{% url 'appointment_add' %}" class="dropdown-item">Book a Design Appointment</a>
                 <a href="{% url 'appointment_show' %}" class="dropdown-item">Your Appointments</a>
               </div>
-            </li>
+            </span>
             {% endif %}
-            <li class="list-inline-item">
+            <span class="list-inline-item">
               <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fa-solid fa-user"></i></div>
@@ -133,15 +131,15 @@
                   <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                 {% endif %}
               </div>
-            </li>
-            <li class="list-inline-item">
+            </span>
+            <span class="list-inline-item">
               <a class="nav-link" href="{% url 'view_bag' %}">
                 <div class="text-center">
                   <div><i class="fa-solid fa-cart-shopping"></i></div>
                 </div>
               </a>
-            </li>
-          </ul>
+            </span>
+          </div>
         </div>
       </div>
       <div class="row">
