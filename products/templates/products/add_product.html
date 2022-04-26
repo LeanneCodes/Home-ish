@@ -28,9 +28,9 @@
         </div>
     </div>
 
-    <div class="container-fluid buffer">
+    <div class="mt-5 design-container" style="max-width: 60%; margin: auto;">
         <div class="row">
-            <div class="col w-80">
+            <div class="col">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
