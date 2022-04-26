@@ -20,7 +20,7 @@
             <div class="col text-center pr-0 pl-0">
                 <div class="jumbotron jumbotron-fluid jumbotron-category mb-0">
                     <div class="container">
-                        <h1 class="display-4 sm-category-name title-size" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Product Management</h1>
+                        <h1 class="sm-category-name long-title" style="text-decoration: none; color: rgba(107, 107, 107, 0.959);">Product Management</h1>
                         <h3>Edit a Product</h3>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
 
     <div class="mt-5 design-container" style="max-width: 60%; margin: auto;">
         <div class="row">
-            <div class="col">
+            <div class="col" style="margin-top: 50px;">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
