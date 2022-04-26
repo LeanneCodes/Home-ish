@@ -944,7 +944,7 @@ footer {
     }
 
     .title-size {
-        font-size: 2.5rem;
+        font-size: 2.5rem !important;
     }
 
     .buffer-small {
@@ -1002,7 +1002,7 @@ footer {
     }
 
     .buffer {
-        margin-top: 150px;
+        margin-top: 150px !important;
     }
 
     .buffer-small {

@@ -38,16 +38,12 @@
         <p class="text-muted text-center pl-5 pr-5">Browse through our décor inspirations below or if you want some personalised help, book an appointment with an in-home designer today!</p>
         {% if request.user.is_authenticated %}
         <div class="text-center">
-            <button class="btn btn-green">
-                <a style="color: white !important; text-decoration: none !important;" href="{% url 'appointment_add' %}">Make an appointment</a>
-            </button>
+            <a class="btn btn-green" style="color: white !important; text-decoration: none !important;" href="{% url 'appointment_add' %}">Make an appointment</a>
         </div>
         {% else %}
         <p class="text-muted text-center pl-5 pr-5">Please create an account so we can keep track of all bookings made.</p>
         <div class="text-center">
-            <button class="btn btn-green">
-                <a style="color: white !important; text-decoration: none !important;" href="{% url 'account_login' %}">Login</a>
-            </button>
+            <a class="btn btn-green" style="color: white !important; text-decoration: none !important;" href="{% url 'account_login' %}">Login</a>
         </div>
         {% endif %}
     </div>
@@ -213,7 +209,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})

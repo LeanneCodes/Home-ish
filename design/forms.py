@@ -40,13 +40,11 @@ class AppointmentForm(forms.ModelForm):
             'age': 'Age',
             'user_phone': 'Phone Number',
             'date': 'MM/DD/YYYY',
-            'time': 'Please select a time',
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'town_or_city': 'Town or City',
             'county': 'County, State or Locality',
             'postcode': 'Postcode',
-            'designer': 'Please choose a designer',
         }
 
         for field in self.fields:
