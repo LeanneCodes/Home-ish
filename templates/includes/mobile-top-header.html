@@ -4,13 +4,13 @@
     </a>
 </div>
 <div style="margin: auto;">
-    <span class="list-inline-item">
+    <div class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="text-center">
                 <span><i class="fas fa-search fa-lg"></i></span>
             </span>
         </a>
-        <span class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
             <form method="GET" action="{% url 'products' %}">
                 <span class="input-group w-100">
                 <input class="form-control border border-gold" type="text" name="q" placeholder="Search our site">
@@ -23,8 +23,8 @@
                 </span>
             </span>
             </form>
-        </span>
-    </span>
+        </div>
+    </div>
     <span class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="{% url 'contact' %}">
         <span class="text-center">
@@ -34,24 +34,24 @@
     </span>
     {% if request.user.is_authenticated %}
         <span class="list-inline-item dropdown">
-            <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="text-center">
                     <span><i class="fa-solid fa-compass-drafting"></i></span>
                 </span>
             </a>
-            <span class="dropdown-menu border-0" aria-labelledby="user-options1">
+            <span class="dropdown-menu border-0" aria-labelledby="user-options3">
                 <a href="{% url 'appointment_add' %}" class="dropdown-item">Book a Design Appointment</a>
                 <a href="{% url 'appointment_show' %}" class="dropdown-item">Your Appointments</a>
             </span>
-        </li>
+        </span>
     {% endif %}
     <span class="list-inline-item dropdown">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="text-center">
                 <span><i class="fa-solid fa-user"></i></span>
             </span>
         </a>
-        <span class="dropdown-menu border-0" aria-labelledby="user-options2">
+        <span class="dropdown-menu border-0" aria-labelledby="user-options4">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Admin Control</a>
