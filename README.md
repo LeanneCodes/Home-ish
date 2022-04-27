@@ -162,10 +162,30 @@ In this project there are 3 main databases. The order database, the in-home desi
 <details>
 <summary>Manual Tests Conducted</summary>
 
+Lanuague | Test | Outcome
+-------- | -------- | --------
+Other (MailChimp) | To successfully add user's email addresses to the Home(ish) MailChimp account |
+JavaScript | To successfully sort products based on the filter, inparticularly by price |
+JavaScript | To restrict users to 50 items of the same product in one shop |
+Email JS | To successfully receive emails from users and notify the user their email was sent successfully |
+Django | To create, edit and delete an appointment form |
+Django | The admin can add, edit and delete products with ease |
+Django | The user can update their delivery information from their account page and this will be reflected when they next purchase from the website |
+Django | To award users free delivery and a £50 discount when their subtotal is £350 |
+Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not |
+Other (Stripe) | Users will be sent confirmation emails with their order details if their payement was successfull |
+
 </details>
 
 <details>
 <summary>Automated Tests Conducted</summary>
+
+Automated test coverage was conducted at app level. The coverage report at the time of the project did not display the htmlcov folder, so individual screen shots have been attached instead.
+
+### Checkout
+### Design
+### Products
+### Profiles
 
 </details>
 
