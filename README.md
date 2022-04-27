@@ -191,15 +191,10 @@ Automated test coverage was conducted at app level. The coverage report at the t
 
 ### Validation Checks
 * HTML W3C Validator – No errors found
-
 * CSS3 Jigsaw Validator – No errors found
-
 * Pep8 – No errors found, except for the placeholder attribute in the design form for 'designer' and 'time'. 
-
 * JShint – No errors found
-
 * Heroku works correctly as planned across Google Chrome, Safari, Microsoft Edge and Mozilla Firefox
-
 * Tested the Heroku program on iPhone 12, Google Pixel 2, Motorola Edge and Huawei P9
 
 ## Project Bugs & Solutions
@@ -221,20 +216,29 @@ On the product detail page, users are limited to add 50 of each product to their
 
 Section | Number | Step | Code | Notes
 -------- | -------- | -------- | -------- | --------
+Creating a Heroku App | 1 | Go to the heroku website and click new and then create new app |
+Creating a Heroku App | 2 | Give your app a name and then chose a region closest to you |
+Creating a Heroku App | 3 | On the resource tab, search for heroku postgres in the add ons bar and select the free plan |
+Creating a Heroku App | 4 | Go back to Gitpod and type the following in the terminal | `pip3 install dj_database_url` then `pip3 install psycopg2-binary` and now freeze `pip3 freeze > requirements.txt` |
+Creating a Heroku App | 5 | Go to settings.py and import dj_database_url | `import dj_database_url` |
+Creating a Heroku App | 6 | Then scroll down to the Database section and comment out the default configuration and replace it with a call to dj_database_url.parse | `dj_database_url.parse()` | DATABASES = {'default': dj_database_url.parse('insert postgres url from heroku config vars under settings tab')} |
+Creating a Heroku App | 7 | Now let's look at the outstanding migrations | `python3 manage.py showmigrations` |
+Creating a Heroku App | 8 | Now migrate changes | `python3 manage.py migrate` |
+Creating a Heroku App | 9 | Upload database, categories first and then products | `python3 manage.py loaddata categories` and then `python3 manage.py loaddata products` |
+Creating a Heroku App | 10 | Now create a superuser to login with | `python3 manage.py createsuperuser` | Create a username and password to login in with later |
+Creating a Heroku App | 11 | Now remove the new database code created and uncomment the original database code before committing to Github | | Delete this code from your settings.py - DATABASES = {'default': dj_database_url.parse('insert postgres url from heroku config vars under settings tab')} |
+Creating a Heroku App | 12 | Commit to Github |
+Deploying to Heroku | 1 | Use an if statement to determine which database the system will follow | | 
+
 
 </details>
 
 ## Technologies Used
 * HTML5
-
 * CSS3
-
 * JavaScript
-
 * Python3
-
 * Django
-
 * Postgres
 
 ## Credits
@@ -242,6 +246,7 @@ Section | Number | Step | Code | Notes
 ### Code
 * Code Institute tutorial videos
 * CSS code for the footer from Colorlib.com
+* Responsive image gallery on the homepage from YouTube
 
 ### Images
 * Unsplash.com
@@ -252,7 +257,5 @@ Section | Number | Step | Code | Notes
 
 ### Acknowledgements
 * My mentor Rahul for his ongoing support and feedback
-
 * The Code Institute’s Tutor Support
-
 * The Slack community
