@@ -79,9 +79,9 @@ In this project there are 3 main databases. The order database, the in-home desi
 
 ![image](https://user-images.githubusercontent.com/81588887/165591868-e5a38d51-5c50-4a8d-9636-1a8c3f12a672.png)
 
-* When you click on the order number, you can see the detail of the user's delivery address, assign them to a user, if need be, the cost of the order and the specific items they bought. If a user has made an error in their purchase, it is possible to select a new product from the drop down list, as this model is linked to the products model. 
+* When you click on the order number, you can see the detail of the user's delivery address, assign them to a user, if need be (this can be done to the one2one relationship between the order model and the user profile model), the cost of the order and the specific items they bought (connection made via the order line item model - foreign key). If a user has made an error in their purchase, it is possible to select a new product from the drop down list, as this model is linked to the products model. 
 
-* If the product was to be deleted, it will no longer appear as an option to select in this model, due to the ForeignKey relationship.
+* If the product was to be deleted, it will no longer appear as an option to select in this model, due to the ForeignKey relationship between product and order line item.
 
 ![image](https://user-images.githubusercontent.com/81588887/165592018-ee8e0ba6-75f6-496a-8dab-7818f66cb304.png)
 
@@ -99,7 +99,7 @@ In this project there are 3 main databases. The order database, the in-home desi
 ![image](https://user-images.githubusercontent.com/81588887/165592254-be079c86-42ba-4c0f-ab75-cb6c8c9a3875.png)
 
 Full Database Schema (made using LucidChart)
-
+<img width="789" alt="image" src="https://user-images.githubusercontent.com/81588887/165623522-85ea2ddf-4dc7-4aae-ba50-e6de0374f1ca.png">
 
 ## Current Features
 <details>
