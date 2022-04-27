@@ -228,8 +228,76 @@ Creating a Heroku App | 9 | Upload database, categories first and then products 
 Creating a Heroku App | 10 | Now create a superuser to login with | `python3 manage.py createsuperuser` | Create a username and password to login in with later |
 Creating a Heroku App | 11 | Now remove the new database code created and uncomment the original database code before committing to Github | | Delete this code from your settings.py - DATABASES = {'default': dj_database_url.parse('insert postgres url from heroku config vars under settings tab')} |
 Creating a Heroku App | 12 | Commit to Github |
-Deploying to Heroku | 1 | Use an if statement to determine which database the system will follow | | 
-
+Deploying to Heroku | 1 | Use an if statement to determine which database the system will follow | | ![database code](https://user-images.githubusercontent.com/81588887/165558846-a5a124e2-0fc1-444c-8064-0aee23fdda4b.png)
+Deploying to Heroku | 2 | Next install gunicorn | `pip3 install gunicorn` |
+Deploying to Heroku | 3 | Freeze this install | `pip3 freeze > requirements.txt` |
+Deploying to Heroku | 4 | Now create a Procfile in the root directory | | Procfile
+Deploying to Heroku | 5 | Type the following into the new Procfile created | `web: gunicorn app_name.wsgi:application`
+Deploying to Heroku | 6 | Now log into heroku via the terminal | `heroku login -i` |
+Deploying to Heroku | 7 | Temporarily disable collect static | `heroku config:set DISABLE_COLLECTSTATIC=1 --app heroku_app_name` |
+Deploying to Heroku | 8 | Go to settings.py, scroll to 'ALLOWED HOSTS' and type in your heroku app url and local host | | ![image](https://user-images.githubusercontent.com/81588887/165560864-cb4d5ad8-a75a-44ce-a2f0-a561721db223.png)
+Deploying to Heroku | 9 | Commit and push your changes through |
+Deploying to Heroku | 10 | Then push to heroku's site | git push heroku main |
+Deploying to Heroku | 11 | Setup automatically deploys by going to heroku's website and selecting the deploy tab |
+Deploying to Heroku | 12 | Then set it to connect to Github and search for your repository and click connect |
+Deploying to Heroku | 13 | Now you can set it to enable automatic deploys | | Now every time you push to Github, your Heroku app will also update and deploy |
+Deploying to Heroku | 14 | Search on Google for a secret key generator, generate a key and then add it to a config variable in Heroku |
+Deploying to Heroku | 15 | In Heroku, under settings, scroll to config vars and type in 'SECRET_KEY' for the key and copy in the secret key code in the value field, then click add |
+Deploying to Heroku | 16 | Go back to settings.py and replace the value for the secret key to the following | `SECRET_KEY = os.environ.get('SECRET_KEY', '')`
+Deploying to Heroku | 17 | Set debug to development if it's true in config vars | `DEBUG = 'DEVELOPMENT' in os.environ` |
+Deploying to Heroku | 18 | Commit and push these changes through |
+Creating an AWS Account | 1 | Go to aws.amazon.com and click on create an account. Proceed to fill in your details |
+Creating an AWS Account | 2 | Sign into your account and in the search bar, type the following | S3 |
+Creating an AWS Account | 3 | Select S3 and create a new bucket |
+Creating an AWS Account | 4 | Give your bucket a name and select the region closest to you |
+Creating an AWS Account | 5 | Then untick 'Block all public access' and tick that you acknowledge your bucket will be public |
+Creating an AWS Account | 6 | Then click create bucket |
+Creating an AWS Account | 7 | On the properties tab, select that you will use this bucket to host a website |
+Creating an AWS Account | 8 | In the index.document field type | `index.html` |
+Creating an AWS Account | 9 | In the error.document field type | `error.html` | | Now click save
+Creating an AWS Account | 10 | On the permissions tab, select the CORS configuration tab | | This is going to setup the required access between our Heroku app and this S3 bucket |
+Creating an AWS Account | 11 | Copy the following code into the CORS configuration window | <img width="249" alt="image" src="https://user-images.githubusercontent.com/81588887/165566820-1ae07646-7402-4914-9e15-6a540ad6fea2.png"> |
+Creating an AWS Account | 12 | Now go to the bucket policy tab and select policy generator | | This is so we can create a security policy for this bucket |
+Creating an AWS Account | 13 | The type of policy is going to be S3 Bucket Policy |
+Creating an AWS Account | 14 | We will allow all principals by using an asterisk in the field box |
+Creating an AWS Account | 15 | Now copy in the ARN which stands for Amazon resource name from the other tab and paste it into the ARN box at the bottom |
+Creating an AWS Account | 16 | Click add statement, then generate policy |
+Creating an AWS Account | 17 | Then copy the policy into the bucket policy editor. Before you click save, you want to allow access to all resources in this bucket |
+Creating an AWS Account | 18 | Add a `/*` onto the end of the resource key and click save | `/*` |
+Creating an AWS Account | 19 | Now go to the access control list tab and set the list objects permissions for everyone under the Public Access section and click save |
+Creating AWS Groups, Policies and Users | 1 | Search for IAM in AWS and open it |
+Creating AWS Groups, Policies and Users | 2 | Click groups, create a new group and give a name to the group that relates to your heroku app name. Then click next step until there is an option to create group |
+Creating AWS Groups, Policies and Users | 3 | Now click on policies and then click create policy |
+Creating AWS Groups, Policies and Users | 4 | Go to the JSON tab and then click import managed policies. Search for the S3 full access policy |
+Creating AWS Groups, Policies and Users | 5 | Grab the bucket ARN from the bucket policy page in S3 and paste that in the Resource section of the code, placing the asterisk | <img width="391" alt="image" src="https://user-images.githubusercontent.com/81588887/165577696-d859e4e5-5ce5-437b-8dba-6c8dc73f0267.png"> |
+Creating AWS Groups, Policies and Users | 6 | Now click review policy, give it a name and a description and then click create policy |
+Creating AWS Groups, Policies and Users | 7 | Your policy has now been created
+Creating AWS Groups, Policies and Users | 8 | Go to groups, click on your bucket group, click attach policy, search for the policy just created and select it and click attach policy |
+Creating AWS Groups, Policies and Users | 9 | Now click on users, click add user, create user named 'heroku_app_name-staticfiles-user' and give them programmatic access, then select next |
+Creating AWS Groups, Policies and Users | 10 | Now select the policy you want for the user, click next, then click create user |
+Creating AWS Groups, Policies and Users | 11 | Now download the csv file which will contain this users access key and secret access key | | It's very important to download and save this file, because once you have gone past this step, you won't be able to download this file again |
+Connecting Django to S3 | 1 | In your terminal install two packages | `pip3 install boto3` and `pip3 install django-storages` |
+Connecting Django to S3 | 2 | Now freeze the new packages | `pip3 freeze > requirements.txt` |
+Connecting Django to S3 | 3 | In settings.py, add storages to installed apps | `storages`
+Connecting Django to S3 | 4 | Scroll down in settings.py to the static files section and copy in the following code | ![image](https://user-images.githubusercontent.com/81588887/165580532-0eced2dd-d142-4e85-94f5-844fdbed0d70.png) |
+Connecting Django to S3 | 5 | Go Heroku's website and add the AWS keys to the config variables and set 'USE_AWS' as the key and the value to True |
+Connecting Django to S3 | 6 | Now remove 'DISABLE_COLLECTSTATIC' variable | | Django should collect the static files automatically and upload them to S3 |
+Connecting Django to S3 | 7 | In Gitpod, create a file called custom storages | | custom_storages.py
+Connecting Django to S3 | 8 | inside this file, type the following | ![image](https://user-images.githubusercontent.com/81588887/165581857-848e0e03-53c6-4ced-986e-5f8c01481eac.png) |
+Connecting Django to S3 | 9 | Now commit and push these changes to Github |
+Connecting Django to S3 | 10 | Now check heroku's activity tab and see if your app is being deployed successfully. You will also see that in your S3 account, you will your static files have been uploaded |
+Caching, Media Files & Stripe | 1 | Go to AWS S3 and create a new folder called media | `media` |
+Caching, Media Files & Stripe | 2 | Inside the media folder, click upload, add files and select all the images that you need to upload. Then click next |
+Caching, Media Files & Stripe | 3 | Under manage public permissions, select grant public read access to these objects, click next until you get to the end and click upload |
+Caching, Media Files & Stripe | 4 | Now go to the Django admin and log into the admin panel |
+Caching, Media Files & Stripe | 5 | If you don't see your superuser email here, you may need to log in first and force allauth to create it and then come back to admin panel. Once you see your email, simply mark it as verified and primary in the admin |
+Caching, Media Files & Stripe | 6 | Now go to stripe.com and login |
+Caching, Media Files & Stripe | 7 | Click developers and then API keys |
+Caching, Media Files & Stripe | 8 | Copy your public key, go to heroku and add it as a config variable under 'STRIPE_PUBLIC_KEY'. Do the same again for the stripe secret key |
+Caching, Media Files & Stripe | 9 | Now create a new webhook endpoint. Go to webhooks, add endpoint, add the url from the heroku app, followed by checkout and wh | `https://homeish.herokuapp.com/checkout/wh/` |
+Caching, Media Files & Stripe | 10 | Select to receive all events and click add endpoint |
+Caching, Media Files & Stripe | 11 | Now you can see your secret key. Now add the webhook value in the Heroku config var settings with the key name 'STRIPE_WH_SECRET' |
+Caching, Media Files & Stripe | 12 | Now send a test webhook from Stripe to make sure that the listener is working | <img width="639" alt="image" src="https://user-images.githubusercontent.com/81588887/165585858-d248b80a-e3ef-4a1b-bfc1-f6929ad10674.png"> |
 
 </details>
 
