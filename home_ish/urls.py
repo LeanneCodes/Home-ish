@@ -33,3 +33,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = "home_ish.views.page_not_found_view"
+handler500 = "home_ish.views.server_error_view"

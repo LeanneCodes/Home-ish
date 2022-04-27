@@ -1,108 +1,56 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Home(ish)
 
-Welcome Leanne Goldsmith,
+## Introduction
+The idea behind Home(ish) is to provide luxury furniture to renters and landlords, who enjoy lavish items and don't want to skimp out just because they are renting. To make this a stronger business case, the Home(ish) brand is also offering a upcycling, buy back scheme, where renters can sell items back to Home(ish) and a fraction of the cost they bought it for and Home(ish) manufacturers will repair the furniture to a high quality, to which it could be sold again to new customers. If the piece of furniture is not in a resellable state, the renter can still receive some money back for their items, but Home(ish) will recycle the furniture where possible. The aim is to reduce carbon footprint, while upholding a luxurious feel to the products Home(ish) sells. The brand is also in conjuction with Earthly.org, a carbon footprint charity. So, where we can donate items to their cause, or help raise money for them, we do.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Home(ish) Website](https://homeish.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Please see the Home(ish) initial business model below, created using Miro.
 
-## Gitpod Reminders
+(Insert business model)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Stories & Project Goals
+Before starting this project, it was important to understand what the purpose of the brand was, how could the user benefit, what else would the user need to feel satisfied from using the website and what considerations would developers need to take on to build a website that fulfilled all needs.
 
-`python3 -m http.server`
+During planning there were some tasks that could not be fulfilled due to timing and they are listed in the Future Features section of this report.
 
-A blue button should appear to click: _Make Public_,
+User Story | Project Goals
+---------- | ----------
+As a user, I want to be able to login and see my past orders. | This was achieved by creating a profile for every user who registered an account with Home(ish) and they can see all the orders they have made on site since registering.
+As a customer, I want to be able to search for a variety of items that can help kit out my new home. | This was achieved by uploading over 200 items of different pieces of furniture to the products.json file.
+As a landlord, I want to be able to find items listed into categories, so that I can reduce my time searching for items I need. | This was achieved by creating categories in the main navigation bar, so that users can choose which specific pieces of furniture they were after, instead of browsing the full catalogue.
+As a user, I want to be able to search for an item using a key word, to find items that are most revelant to my search. | This was achieved by including a search bar, which is a form, and when a user typed in keywords, items that have a name or description that matched those keywords, would appear in the search results.
+As a user, I want to be able to see a live update of how many items are in my shopping cart and the subtotal to see how much I'm estimated to spend. | This was achieved by creating toasts, which display the number of items in the basket, the name and photo of the items added, as well as the subtotal, to show the user what's currently in their shopping cart and how much their cart totals to.
+As a user, I want to be able to make secure payments on the website, in the fewest steps possible. | This was achieved by adding the delivery information and overview of the user's shopping cart on one page (checkout page) and using Stripe's payment software to handle payments, which is secure. The journey from shopping cart to successfull payment can take as less as 2 minutes.
+As a user, I want to be able to get an idea of how I could style some of these items in my new home, so that I can buy with confidence. | This was achieved by creating an in-home service, where designers from Home(ish) can visit people in their homes and give advice on what furniture or décor pieces they should buy. This is done through the user making an appointment on the website, which they can then edit or delete and they are alerted of making any changes.
 
-Another blue button should appear to click: _Open Browser_.
+The initial draft of user stories is captured below.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+(Insert user stories excel sheet)
 
-A blue button should appear to click: _Make Public_,
+## Project Design
+The project design is split into 3 parts: the appearance of the website, access levels and the structure of the database.
 
-Another blue button should appear to click: _Open Browser_.
+### The Appearance
+* The colour scheme used for this project derived from research that concluded purple is considered a luxury/royal colour. Hence why it was the main colour featured throughout the website. The idea behind it is, if the user can sense the luxury feeling of website, they will trust they will receive luxury goods.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* The Home(ish) brand font was chosen, due to the calligraphy that is common when you see elder people with a priviledged education background. Hoping that the font will captivate the user and entice them to browse the website. The main target audience is people with a considerable amount of disposable income, which is likely to be users in their late 30s and onwards. Given the price point of the furniture, it would make sure to target this audience.
 
-To log into the Heroku toolbelt CLI:
+* The product images are from MADE.com and they are reputable brand, known to sell expensive furniture, so it seemed appropriate to use their items, as their products and packshot photos are very professional and high-end.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* The opening image on the index page, with the white doors, is meant to emulate a clean, luxury feeling with the opportunity to design your space however you like. However, on smaller screens, a different image is used as the white door image is not as obvious when rendered for small screens.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* The initial design of the website is pictured below. As you browse through the homepage and the category pages, you will be able to see the structure is fairly similar but tweaked to match the improved Home(ish) brand design.
 
-------
+(Insert initial Home(ish) design)
 
-## Release History
+### Role Access
+* Majority of the website functionality is available to users who are not logged in. This is to maximise sales on the website with fewer barriers in place. However, if the user is not logged in nor created an account, they will not be able to see their past orders on the website.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* Additionally, the user will not be able to make an appointment with an in-home Home(ish) designer, as this requires a user to be logged in, so that they can manage and track their appointments.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Furthermore, the admin of the website have their own access, which allows them to add, edit and delete products on the website. They also have the ability to state if an item is on sale or a new arrival, by selecting a drop down option. If they do this, items will appear with the appropriate tag under the product rating.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Non-admin users cannot access pages that only an admin can use and this done by stating in the code, if the user is not a superuser, they will be told that this page is unaccessible to them and be redirected to the home page.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+* Non logged in users cannot access content that is for logged in users, as the code specifies that the user needs to be logged in to view content `@login_required`. If they attempt to, they will also be redircted to the home page.
