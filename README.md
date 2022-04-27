@@ -1,16 +1,18 @@
 # Home(ish)
 
 ## Introduction
-The idea behind Home(ish) is to provide luxury furniture to renters and landlords, who enjoy lavish items and don't want to skimp out just because they are renting. To make this a stronger business case, the Home(ish) brand is also offering a upcycling, buy back scheme, where renters can sell items back to Home(ish) and a fraction of the cost they bought it for and Home(ish) manufacturers will repair the furniture to a high quality, to which it could be sold again to new customers. If the piece of furniture is not in a resellable state, the renter can still receive some money back for their items, but Home(ish) will recycle the furniture where possible. The aim is to reduce carbon footprint, while upholding a luxurious feel to the products Home(ish) sells. The brand is also in conjuction with Earthly.org, a carbon footprint charity. So, where we can donate items to their cause, or help raise money for them, we do.
+The idea behind Home(ish) is to provide luxury furniture to renters and landlords, who enjoy lavish items and don't want to skimp out just because they are renting. To make this a stronger business case, the Home(ish) brand is also offering a upcycling, buy back scheme, where renters and landlords can sell items back to Home(ish) at a fraction of the cost they bought it for. Home(ish) manufacturers will then repair the furniture to a high quality, to which it could be sold again to new customers. If the piece of furniture is not in a resellable state, the renter/landlord can still receive some money back for their items, but Home(ish) will recycle the furniture where possible. The aim is to reduce carbon footprint, while upholding a luxurious feel to the products Home(ish) sells. The brand is also in conjuction with Earthly.org, a carbon footprint charity. So, where we can donate items to their cause, or help raise money for them, we do.
+
+![image](https://user-images.githubusercontent.com/81588887/165587950-a38e8c93-c892-4e5c-8c89-5878514dc7a7.png)
 
 [Home(ish) Website](https://homeish.herokuapp.com/)
 
 Please see the Home(ish) initial business model below, created using Miro.
 
-(Insert business model)
+![image](https://user-images.githubusercontent.com/81588887/165588031-226dc6d2-6228-4f5c-b257-26d0b630c52b.png)
 
 ## User Stories & Project Goals
-Before starting this project, it was important to understand what the purpose of the brand was, how could the user benefit, what else would the user need to feel satisfied from using the website and what considerations would developers need to take on to build a website that fulfilled all needs.
+Before starting this project, it was important to understand what the purpose of the brand was, how could the user benefit, what else would the user need to feel satisfied from using the website, and what considerations would developers need to take on to build a website that fulfilled all needs.
 
 During planning there were some tasks that could not be fulfilled due to timing and they are listed in the Future Features section of this report.
 
@@ -26,23 +28,31 @@ As a user, I want to be able to get an idea of how I could style some of these i
 
 The initial draft of user stories is captured below.
 
-(Insert user stories excel sheet)
+<img width="980" alt="image" src="https://user-images.githubusercontent.com/81588887/165588245-2d7de5a6-588b-4ac2-8feb-a33b51fcbb7e.png">
 
 ## Project Design
 The project design is split into 3 parts: the appearance of the website, access levels and the structure of the database.
 
 ### The Appearance
-* The colour scheme used for this project derived from research that concluded purple is considered a luxury/royal colour. Hence why it was the main colour featured throughout the website. The idea behind it is, if the user can sense the luxury feeling of website, they will trust they will receive luxury goods.
+* The colour scheme used for this project derived from research that concluded purple and gold are considered luxury/royal colours. Hence why the colours were featured throughout the website. The idea behind it is, if the user can sense the luxury feeling of website, they will trust they will receive luxury goods.
+
+![image](https://user-images.githubusercontent.com/81588887/165588440-7ce45388-70bd-4008-8171-6a1450f1040e.png)
 
 * The Home(ish) brand font was chosen, due to the calligraphy that is common when you see elder people with a priviledged education background. Hoping that the font will captivate the user and entice them to browse the website. The main target audience is people with a considerable amount of disposable income, which is likely to be users in their late 30s and onwards. Given the price point of the furniture, it would make sure to target this audience.
+
+![image](https://user-images.githubusercontent.com/81588887/165588522-ebe4c567-dd9e-4404-8d60-d5cdfcbfff91.png)
 
 * The product images are from MADE.com and they are reputable brand, known to sell expensive furniture, so it seemed appropriate to use their items, as their products and packshot photos are very professional and high-end.
 
 * The opening image on the index page, with the white doors, is meant to emulate a clean, luxury feeling with the opportunity to design your space however you like. However, on smaller screens, a different image is used as the white door image is not as obvious when rendered for small screens.
 
+![image](https://user-images.githubusercontent.com/81588887/165588714-d4e33591-ce64-4b79-8836-a30c8237a5dc.png)
+
 * The initial design of the website is pictured below. As you browse through the homepage and the category pages, you will be able to see the structure is fairly similar but tweaked to match the improved Home(ish) brand design.
 
-(Insert initial Home(ish) design)
+<img width="993" alt="image" src="https://user-images.githubusercontent.com/81588887/165589937-e68ac483-6b66-4ff3-877f-30dbd7bff115.png">
+<img width="989" alt="image" src="https://user-images.githubusercontent.com/81588887/165590019-6172607a-df5e-477f-8d51-5f4972d58099.png">
+<img width="973" alt="image" src="https://user-images.githubusercontent.com/81588887/165590095-a532fe8c-aeaf-4125-a91d-e29933ea80fd.png">
 
 ### Role Access
 * Majority of the website functionality is available to users who are not logged in. This is to maximise sales on the website with fewer barriers in place. However, if the user is not logged in nor created an account, they will not be able to see their past orders on the website.
@@ -55,7 +65,11 @@ The project design is split into 3 parts: the appearance of the website, access 
 
 * Non logged in users cannot access content that is for logged in users, as the code specifies that the user needs to be logged in to view content `@login_required`. If they attempt to, they will have the option to go back to the home page via a link on the server error 500 page.
 
+![image](https://user-images.githubusercontent.com/81588887/165591643-97843d9c-9ec7-4fed-bd8c-5a5ba5a549b1.png)
+
 * If any user, including the admin, types in an incorrect url address, they will be served an 404 error page, with the opportunity to go back to the home page.
+
+![image](https://user-images.githubusercontent.com/81588887/165590706-bff62974-4392-477b-a84c-cfbe67f1ff9e.png)
 
 ### Database Structure
 In this project there are 3 main databases. The order database, the in-home design booking database and the products database.
@@ -63,17 +77,26 @@ In this project there are 3 main databases. The order database, the in-home desi
 #### The Order Database
 * The order database gives visibility to the admin on all the orders that have been made on the website by logged in and non-logged in users. The Anonymous user was not logged in when making a purchase.
 
+![image](https://user-images.githubusercontent.com/81588887/165591868-e5a38d51-5c50-4a8d-9636-1a8c3f12a672.png)
+
 * When you click on the order number, you can see the detail of the user's delivery address, assign them to a user, if need be, the cost of the order and the specific items they bought. If a user has made an error in their purchase, it is possible to select a new product from the drop down list, as this model is linked to the products model. 
 
 * If the product was to be deleted, it will no longer appear as an option to select in this model, due to the ForeignKey relationship.
 
+![image](https://user-images.githubusercontent.com/81588887/165592018-ee8e0ba6-75f6-496a-8dab-7818f66cb304.png)
+
 #### The Appointments Database
-* The appointment database view allows the admin to see which designer have appointments booked and with which user.
+* The appointment database view allows the admin to see which designers have appointments booked and with which user.
 
 * If the admin were to delete a designer from the model list, then all appointments made with that designer will also be deleted. This is due to the ForeignKey relationship between the Appointments model and the Designer model.
 
+![image](https://user-images.githubusercontent.com/81588887/165592122-71003fed-ac5b-484c-a9d5-9fae56ce3b93.png)
+
 #### The Products and Categories Database
 * Given the vast data appened to each product, it's important to know what category each product falls under, is it also on sale or a new arrival, what's the current price and rating etc. Similar to the appointments model, if a category is no longer available and is deleted, the products under this category will also be deleted. Once again due to the ForeignKey relationship.
+
+![image](https://user-images.githubusercontent.com/81588887/165592192-408aa7cd-e968-40d7-acaa-a85baf35d6de.png)
+![image](https://user-images.githubusercontent.com/81588887/165592254-be079c86-42ba-4c0f-ab75-cb6c8c9a3875.png)
 
 ## Current Features
 <details>
@@ -84,41 +107,71 @@ In this project there are 3 main databases. The order database, the in-home desi
 
 * There is also a small blurb on the homepage to explain more about the purpose of the site, to mitigate any concerns on what the website is about.
 
+![image](https://user-images.githubusercontent.com/81588887/165592344-20facb56-8e91-42ae-bbe8-af4c3f6657f3.png)
+
 * There is an opportunity for the user to sign up to Home(ish)'s newsletter and subscribe. This functionality was built using MailChimp. In a real world project, the user would be sent regular updates about new stock available, sales, the partnership with Earthly.org etc.
+  
+![image](https://user-images.githubusercontent.com/81588887/165592466-0ee12384-0d02-4be4-957b-ed6ac80b3996.png)
 
 * Following on from this, the user is exposed some décor images and a glimpse of some of the content on Home(ish)'s social media pages. Additionally, there are 3 icons of the social pages Home(ish) has, which the user can explore.
+  
+![image](https://user-images.githubusercontent.com/81588887/165592522-2fa58c2a-324d-4698-8c61-aad4ce80ec79.png)
 
 ### All Products
 * The all products page essentially lists all the products in the store's catalogue. There is an opportunity for the user to sort the list in 4 ways, by price (low or high), by rating (low or high), by name (A-Z) and by category (A-Z). So, if a user is looking to see the least expensive products on site, they can it with ease and can continue exploring what products Home(ish) has by playing with the sorting.
+  
+![image](https://user-images.githubusercontent.com/81588887/165592818-dd992647-29b9-431e-9cb5-35ce182801e2.png)
 
 * Each product has a picture, name, price, category, rating and if it's on sale or a new arrival. The item is on sale, the original price will be striken through and in light grey. This is to make it obvious to the user what the current price is.
 
 * In the admin's view, they will also see an option to edit or delete the product, which won't be visible to a non superuser. This is to prevent non superuser's from editing the catalogue in any way.
 
 * Depending on the screen size the user is visiting the website on, they will either see an array of 4 products per line (desktop and larger screens), down to 1 product, if viewing on mobile.
+  
+![image](https://user-images.githubusercontent.com/81588887/165592751-6328eacd-2436-4802-abbd-16bfb187bec8.png)
 
 ### Categories
-* There are 8 categories in total. Each category has a minimum of 15 items, so there is a variety a user can choose from.
+* There are 10 categories in total. However, 2 of these categories are for labelling purposes, 'Sale' and 'New Arrivals'. Each category has a minimum of 15 items, so there is a variety a user can choose from.
+  
+![image](https://user-images.githubusercontent.com/81588887/165593011-da23b077-1cb9-43b1-a040-55c737686f7d.png)
 
 * Each category has it's own page and header, so the user knows what items to expect on the page.
 
 * Once again, the user can use the sorting functionality to reorganise the position of the products on the page.
+  
+![image](https://user-images.githubusercontent.com/81588887/165593153-88584e80-7a41-4b1c-961a-796b3c97d8de.png)
 
 ### Décor Inspiration
 * This page was created to give users inspiration on how they could decorate their home. The more pictures that inspire them, the more likely they will want to add more products to their shopping cart to replicate the décor images.
 
 * This page also presents the opportunity for users to book an in-home design with one of Home(ish) designers. If the user is logged in they will be directed to the appointment booking page. If the user is not logged in, then they will be directed to login/create an account first, before they can proceed to make an appointment. This is because the user needs an account to see the bookings they have made with the store.
+  
+![image](https://user-images.githubusercontent.com/81588887/165593326-92042ce2-aa4b-4575-9777-d9d439e1e9bb.png)
+(logged in)
+
+![image](https://user-images.githubusercontent.com/81588887/165593431-431398e3-4d38-4441-9dfa-af0a219c5156.png)
+(logged out or have not registered an account yet)
 
 ### Contact Us
 * The contact us page, allows users to send messages to Home(ish) regarding any questions they have, including the buy back scheme. Currently there isn't a feature for users to submit a form on the list of products they wish to sell back and the estimated price they could get for it.
+  
+![image](https://user-images.githubusercontent.com/81588887/165593565-82ba03bd-9167-4256-93e4-afdc8f936099.png)
 
 ### Appointments
 * The appointments page, is a short form the user will need to fill out. Once successfully submitted, the user will be directed to a page where they can see all the bookings they have made. They will also have the opportunity to edit and/or delete bookings. If they have no upcoming bookings, they will have the option to make an appointment from this page.
+  
+![image](https://user-images.githubusercontent.com/81588887/165593705-4226651d-e3dd-479e-9061-4275d19bd928.png)
+![image](https://user-images.githubusercontent.com/81588887/165593831-0011cd0b-b6cc-4e66-b16d-909282f32137.png)
+![image](https://user-images.githubusercontent.com/81588887/165593907-e4f72bb0-2273-4569-979c-6953946ddb19.png)
 
 ### Profile
-* In the profile page non superuser's will see their past orders and their delivery information. They can update their delivery information as often as they need to.
+* In the profile page, logged in users will see their past orders and their delivery information. They can update their delivery information as often as they need to.
+  
+![image](https://user-images.githubusercontent.com/81588887/165594192-e01534d5-f007-4090-8f7e-23d920e31039.png)
 
 * The superuser, also know as the admin, will have an additional page accessible to them, where they can choose to add products to the website, simply by filling out a form. They can also choose the edit products. If they do they will shown a similar view, with the fields prefilled and they can choose what needs editing. Once they have made their changes, they can click update and the changes will be reflected in the main products view. Updates are made instantaneously.
+  
+![image](https://user-images.githubusercontent.com/81588887/165594330-bb331021-1e41-493a-8ff7-5ce08f47fe79.png)
 
 ### Shopping Cart
 * The shopping cart displays the item(s) added to the cart, the sku number, price, quantity and subtotal. Additionally, it shows the bag total, any delivery costs, discounts awarded and the grand total.
@@ -126,24 +179,51 @@ In this project there are 3 main databases. The order database, the in-home desi
 * The current promotion on the website is that if the user's subtotal is greater than £350, then the user is awarded free delivery and £50 off their grand total. If the user does not have a cart value of at least £350, then they will need to pay a delivery fee that is 20% of the current subtotal value.
 
 * Additionally, if the user is close to the £350 mark to be awarded the discount, there will be a message telling the user, the remaining amount they will need to spend. This is also flagged to the user in the toast, when they add something new to their shopping cart.
+  
+![image](https://user-images.githubusercontent.com/81588887/165594571-c24a4d28-66a5-407e-b144-e3f266864a4e.png)
+(shopping cart subtotal is greater than £350, so the user gets free delivery and a £50 discount)
+![image](https://user-images.githubusercontent.com/81588887/165594877-d349ea89-b531-4b92-a9a4-260bb7edfc57.png)
+(shopping cart subtotal is less than £50, so the user is charged an addiional 20% delivery fee and receives no discount)
 
 ### Checkout
 * The checkout page has a small form for the user to fill out. Their name, email and delivery information. It also shows an overview of the items the user has added to their shopping cart, any discounts awarded and if they have a delivery charge.
 
 * The user can also add in their payment information to finish the checkout stage. The website won't be able to start processing payments until every necessary/required field has valid input from the user.
+  
+![image](https://user-images.githubusercontent.com/81588887/165595336-5b9493da-91c8-4183-be3f-add6cf5a2ab3.png)
 
 * Once the order has gone through successfully, the user will be redirected to the checkout success page and see a confirmation page of the items they ordered, along with the delivery address and how much they will be charged. It also notifies the user that a confirmation email will be sent to the email address they inputted at checkout stage.
 
 * There is also an opportunity to drive users back to the product page with the CTA button on the button of the confirmation page. This is to entice users to check the product page again and purchase anything they may have been hesitating on before, or forgot to purchase.
+  
+![image](https://user-images.githubusercontent.com/81588887/165595653-88fd4cf0-f1de-452c-b9f1-ab449aaddfdd.png)
+![image](https://user-images.githubusercontent.com/81588887/165595722-cd2d969e-28de-45dc-b76c-c4e71e8e6aa7.png)
 
 ### Footer
 * The footer is available on every page as it is part of the base.html doc. It has information of Home(ish)'s privacy policy, contact page, the link to Earthly.org charity page, their 3 social pages and the Home(ish) in-home design service. This information was chosen to be in the footer, so the user always has access to these links no matter what page they are on.
+  
+![image](https://user-images.githubusercontent.com/81588887/165595793-1c7ab6ce-1e60-48e4-bcff-5f32ff3941d7.png)
+(desktop or tablet view)
+![image](https://user-images.githubusercontent.com/81588887/165596136-92505df8-43cd-4f0e-8c3b-2c39447fdaeb.png)
+(mobile view)
 
 ### Main Navigation Bar
 * The main navigation bar displays the brand name, the option to click on the product catalogue, the categories, the décor inspiration, contact page, appointment page, profile page and the shopping cart. Once again, these links are available on every page as it's part of the base.html doc. The user will have access to all necessary links either via the main navigation bar or the footer.
+  
+![image](https://user-images.githubusercontent.com/81588887/165595877-d3f467ee-83c3-4373-b5f6-980fb0ab8f7d.png)
+(desktop or tablet view)
+![image](https://user-images.githubusercontent.com/81588887/165595970-49dbd2ab-d233-4764-aac5-9b1a2011b168.png)
+(mobile view)
 
 ### Login/Logout/Sign Up
 * The signing up process is very straightforward. If the user is not currently logged in, there will be an option to either sign up/register or login. Once the user has created an account and is logged in, they will have the option to logout. This is reflected on the profile icon.
+  
+![image](https://user-images.githubusercontent.com/81588887/165596293-b9d7e425-c659-4cef-837c-ce6353bebc76.png)
+(login view)
+![image](https://user-images.githubusercontent.com/81588887/165596407-8f7eed79-a2ce-4386-957f-6c88cb380afb.png)
+(sign up view)
+![image](https://user-images.githubusercontent.com/81588887/165596533-974567ab-a6e5-46a1-9895-b8213aaa8412.png)
+(logout view)
 
 * The user is also notified via toasts messages when they have logged in, so it's clear to the user that the logging in process was successful. The same happens when the user logs out, they see a toast telling them they have successfully signed out.
 
@@ -164,16 +244,32 @@ In this project there are 3 main databases. The order database, the in-home desi
 
 Lanuague | Test | Outcome
 -------- | -------- | --------
-Other (MailChimp) | To successfully add user's email addresses to the Home(ish) MailChimp account |
-JavaScript | To successfully sort products based on the filter, inparticularly by price |
-JavaScript | To restrict users to 50 items of the same product in one shop |
-Email JS | To successfully receive emails from users and notify the user their email was sent successfully |
-Django | To create, edit and delete an appointment form |
-Django | The admin can add, edit and delete products with ease |
-Django | The user can update their delivery information from their account page and this will be reflected when they next purchase from the website |
-Django | To award users free delivery and a £50 discount when their subtotal is £350 |
-Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not |
-Other (Stripe) | Users will be sent confirmation emails with their order details if their payement was successfull |
+Other (MailChimp) | To successfully add user's email addresses to the Home(ish) MailChimp account | ![image](https://user-images.githubusercontent.com/81588887/165596640-602dc54d-4674-4b6f-b716-b37817f0a899.png)
+JavaScript | To successfully sort products based on the filter, inparticularly by price | ![image](https://user-images.githubusercontent.com/81588887/165596781-50f6b226-cb16-4341-a561-e5ccd8d679b4.png)
+JavaScript | To restrict users to 50 items of the same product in one shop | ![image](https://user-images.githubusercontent.com/81588887/165596896-fe2f0c91-270d-4d2b-972a-f509f3d9346f.png)
+Email JS | To successfully receive emails from users and notify the user their email was sent successfully | ![image](https://user-images.githubusercontent.com/81588887/165597662-23b89e0e-d8d1-4069-b8a3-75cbe0c7c749.png)
+![image](https://user-images.githubusercontent.com/81588887/165597763-d24cdce6-f5eb-49b5-aa0c-eee375198ab4.png)
+Django | To create, edit and delete an appointment form | ![image](https://user-images.githubusercontent.com/81588887/165597945-49e34e16-ddda-4bc3-aa9a-533bf192af80.png)
+![image](https://user-images.githubusercontent.com/81588887/165598014-f8952dbb-976f-4335-bc5a-052cf37ea767.png)
+![image](https://user-images.githubusercontent.com/81588887/165598116-9d3778c0-d30f-42f9-a2d2-5a6b7c06c8d3.png)
+![image](https://user-images.githubusercontent.com/81588887/165598162-70e86544-1cf4-48bb-9584-e92518fb18df.png)
+Django | The admin can add, edit and delete products with ease | ![image](https://user-images.githubusercontent.com/81588887/165598651-da7df2ac-174b-4ec2-9cd5-2f7886e628c7.png)
+![image](https://user-images.githubusercontent.com/81588887/165598346-06bf34c4-1e63-469b-97ef-d44e98452661.png)
+![image](https://user-images.githubusercontent.com/81588887/165598442-331c7ea7-5311-44a2-aa95-c615e8bd0739.png)
+![image](https://user-images.githubusercontent.com/81588887/165598802-0609ed9e-ae5b-4176-9b4a-de4fdc75c7d5.png)
+Django | The user can update their delivery information from their account page and this will be reflected when they next purchase from the website | ![image](https://user-images.githubusercontent.com/81588887/165599122-7a777f93-b2bd-4dff-9e4e-f915b1f34762.png)
+(added Thia Tower to the second street address line)
+![image](https://user-images.githubusercontent.com/81588887/165599249-294eb336-21a2-4196-82fd-5828735b4a3e.png)
+(Thia Tower now appears at the checkout stage automatically)
+Django | To award users free delivery and a £50 discount when their subtotal is £350 | ![image](https://user-images.githubusercontent.com/81588887/165599428-a6144998-bc64-4580-b874-64e27d8bc8db.png)
+(subtotal is less than £350)
+![image](https://user-images.githubusercontent.com/81588887/165599518-d0c56c92-5629-4657-9ff4-f9e779dc6da9.png)
+(subtotal is greater than £350 and the user has free delivery and £50 off)
+Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not | ![image](https://user-images.githubusercontent.com/81588887/165599828-e72ef13a-fc87-4f53-9979-95956b79baa7.png)
+(successfull test card payment details)
+![image](https://user-images.githubusercontent.com/81588887/165600097-1afaa7f4-ed6f-4acf-9e3c-efead128ef65.png)
+(declined test card payment details)
+Other (Stripe) | Users will be sent confirmation emails with their order details if their payement was successfull | ![Screenshot 2022-04-27 at 20 02 22](https://user-images.githubusercontent.com/81588887/165600791-8e5f0049-cf9a-481e-beed-76b845082558.png)
 
 </details>
 
