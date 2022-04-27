@@ -1,6 +1,4 @@
 from django.test import TestCase
-from .models import Appointment
-from django.shortcuts import render, redirect, get_object_or_404
 
 
 class TestViews(TestCase):

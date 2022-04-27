@@ -1,6 +1,4 @@
 from django.test import TestCase
-from .models import UserProfile
-from django.shortcuts import render, redirect, get_object_or_404
 
 
 class TestViews(TestCase):
@@ -13,4 +11,3 @@ class TestViews(TestCase):
         response = self.client.get("/checkout_success")
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "checkout/checkout_success.html")
-
