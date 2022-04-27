@@ -229,6 +229,14 @@ In this project there are 3 main databases. The order database, the in-home desi
 
 </details>
 
+## Social Media Pages
+
+### Facebook
+
+### Instagram
+
+### Pinterest
+
 ## Future Implementations
 * To include a wishlist page, so users can favourite items that they would like to purchase in the future.
 
@@ -247,28 +255,12 @@ Lanuague | Test | Outcome
 Other (MailChimp) | To successfully add user's email addresses to the Home(ish) MailChimp account | ![image](https://user-images.githubusercontent.com/81588887/165596640-602dc54d-4674-4b6f-b716-b37817f0a899.png)
 JavaScript | To successfully sort products based on the filter, inparticularly by price | ![image](https://user-images.githubusercontent.com/81588887/165596781-50f6b226-cb16-4341-a561-e5ccd8d679b4.png)
 JavaScript | To restrict users to 50 items of the same product in one shop | ![image](https://user-images.githubusercontent.com/81588887/165596896-fe2f0c91-270d-4d2b-972a-f509f3d9346f.png)
-Email JS | To successfully receive emails from users and notify the user their email was sent successfully | ![image](https://user-images.githubusercontent.com/81588887/165597662-23b89e0e-d8d1-4069-b8a3-75cbe0c7c749.png)
-![image](https://user-images.githubusercontent.com/81588887/165597763-d24cdce6-f5eb-49b5-aa0c-eee375198ab4.png)
-Django | To create, edit and delete an appointment form | ![image](https://user-images.githubusercontent.com/81588887/165597945-49e34e16-ddda-4bc3-aa9a-533bf192af80.png)
-![image](https://user-images.githubusercontent.com/81588887/165598014-f8952dbb-976f-4335-bc5a-052cf37ea767.png)
-![image](https://user-images.githubusercontent.com/81588887/165598116-9d3778c0-d30f-42f9-a2d2-5a6b7c06c8d3.png)
-![image](https://user-images.githubusercontent.com/81588887/165598162-70e86544-1cf4-48bb-9584-e92518fb18df.png)
-Django | The admin can add, edit and delete products with ease | ![image](https://user-images.githubusercontent.com/81588887/165598651-da7df2ac-174b-4ec2-9cd5-2f7886e628c7.png)
-![image](https://user-images.githubusercontent.com/81588887/165598346-06bf34c4-1e63-469b-97ef-d44e98452661.png)
-![image](https://user-images.githubusercontent.com/81588887/165598442-331c7ea7-5311-44a2-aa95-c615e8bd0739.png)
-![image](https://user-images.githubusercontent.com/81588887/165598802-0609ed9e-ae5b-4176-9b4a-de4fdc75c7d5.png)
-Django | The user can update their delivery information from their account page and this will be reflected when they next purchase from the website | ![image](https://user-images.githubusercontent.com/81588887/165599122-7a777f93-b2bd-4dff-9e4e-f915b1f34762.png)
-(added Thia Tower to the second street address line)
-![image](https://user-images.githubusercontent.com/81588887/165599249-294eb336-21a2-4196-82fd-5828735b4a3e.png)
-(Thia Tower now appears at the checkout stage automatically)
-Django | To award users free delivery and a £50 discount when their subtotal is £350 | ![image](https://user-images.githubusercontent.com/81588887/165599428-a6144998-bc64-4580-b874-64e27d8bc8db.png)
-(subtotal is less than £350)
-![image](https://user-images.githubusercontent.com/81588887/165599518-d0c56c92-5629-4657-9ff4-f9e779dc6da9.png)
-(subtotal is greater than £350 and the user has free delivery and £50 off)
-Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not | ![image](https://user-images.githubusercontent.com/81588887/165599828-e72ef13a-fc87-4f53-9979-95956b79baa7.png)
-(successfull test card payment details)
-![image](https://user-images.githubusercontent.com/81588887/165600097-1afaa7f4-ed6f-4acf-9e3c-efead128ef65.png)
-(declined test card payment details)
+Email JS | To successfully receive emails from users and notify the user their email was sent successfully | ![image](https://user-images.githubusercontent.com/81588887/165597662-23b89e0e-d8d1-4069-b8a3-75cbe0c7c749.png)![image](https://user-images.githubusercontent.com/81588887/165597763-d24cdce6-f5eb-49b5-aa0c-eee375198ab4.png)
+Django | To create, edit and delete an appointment form | ![image](https://user-images.githubusercontent.com/81588887/165597945-49e34e16-ddda-4bc3-aa9a-533bf192af80.png)![image](https://user-images.githubusercontent.com/81588887/165598014-f8952dbb-976f-4335-bc5a-052cf37ea767.png)![image](https://user-images.githubusercontent.com/81588887/165598116-9d3778c0-d30f-42f9-a2d2-5a6b7c06c8d3.png)![image](https://user-images.githubusercontent.com/81588887/165598162-70e86544-1cf4-48bb-9584-e92518fb18df.png)
+Django | The admin can add, edit and delete products with ease | ![image](https://user-images.githubusercontent.com/81588887/165598346-06bf34c4-1e63-469b-97ef-d44e98452661.png)![image](https://user-images.githubusercontent.com/81588887/165598651-da7df2ac-174b-4ec2-9cd5-2f7886e628c7.png)![image](https://user-images.githubusercontent.com/81588887/165598442-331c7ea7-5311-44a2-aa95-c615e8bd0739.png)![image](https://user-images.githubusercontent.com/81588887/165598802-0609ed9e-ae5b-4176-9b4a-de4fdc75c7d5.png)
+Django | The user can update their delivery information from their account page and this will be reflected when they next purchase from the website | ![image](https://user-images.githubusercontent.com/81588887/165599122-7a777f93-b2bd-4dff-9e4e-f915b1f34762.png)(added Thia Tower to the second street address line)![image](https://user-images.githubusercontent.com/81588887/165599249-294eb336-21a2-4196-82fd-5828735b4a3e.png)(Thia Tower now appears at the checkout stage automatically)
+Django | To award users free delivery and a £50 discount when their subtotal is £350 | ![image](https://user-images.githubusercontent.com/81588887/165599428-a6144998-bc64-4580-b874-64e27d8bc8db.png)(subtotal is less than £350)![image](https://user-images.githubusercontent.com/81588887/165599518-d0c56c92-5629-4657-9ff4-f9e779dc6da9.png)(subtotal is greater than £350 and the user has free delivery and £50 off)
+Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not | ![image](https://user-images.githubusercontent.com/81588887/165599828-e72ef13a-fc87-4f53-9979-95956b79baa7.png)(successfull test card payment details)![image](https://user-images.githubusercontent.com/81588887/165600097-1afaa7f4-ed6f-4acf-9e3c-efead128ef65.png)(declined test card payment details)
 Other (Stripe) | Users will be sent confirmation emails with their order details if their payement was successfull | ![Screenshot 2022-04-27 at 20 02 22](https://user-images.githubusercontent.com/81588887/165600791-8e5f0049-cf9a-481e-beed-76b845082558.png)
 
 </details>

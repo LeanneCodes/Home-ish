@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Appointment
 from .forms import AppointmentForm
 
 # Create your views here.
 
 
+@login_required
 def appointment_add(request):
     """ A view that shows a booking option """
     if request.method == 'POST':
@@ -29,6 +31,7 @@ def appointment_add(request):
     return render(request, template, context)
 
 
+@login_required
 def appointment_update(request, appointment_id):
     appointment = get_object_or_404(Appointment, pk=appointment_id)
     if request.method == "POST":
@@ -54,6 +57,7 @@ def appointment_update(request, appointment_id):
     return render(request, template, context)
 
 
+@login_required
 def appointment_show(request):
     """ A view that shows all bookings made by that user """
     appointments = request.user.hiuser.all()
