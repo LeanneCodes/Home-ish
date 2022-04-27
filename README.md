@@ -232,10 +232,16 @@ In this project there are 3 main databases. The order database, the in-home desi
 ## Social Media Pages
 
 ### Facebook
+![image](https://user-images.githubusercontent.com/81588887/165603272-db42a641-a4a1-49bb-9928-0b5401905289.png)
+[Home(ish) Facebook Page](https://www.facebook.com/Home_ish-106704365332388)
 
 ### Instagram
+![image](https://user-images.githubusercontent.com/81588887/165603515-7a45898e-31e9-49e5-87c1-e9f865de6c0c.png)
+[Home(ish) Instagram Page](https://www.instagram.com/home.ish_uk/)
 
 ### Pinterest
+![image](https://user-images.githubusercontent.com/81588887/165603705-be3c0cbc-f859-4128-8703-5373df18d014.png)
+[Home(ish) Pinterest Page](https://www.pinterest.co.uk/homeish_uk/_created/)
 
 ## Future Implementations
 * To include a wishlist page, so users can favourite items that they would like to purchase in the future.
@@ -271,9 +277,16 @@ Other (Stripe) | Users will be sent confirmation emails with their order details
 Automated test coverage was conducted at app level. The coverage report at the time of the project did not display the htmlcov folder, so individual screen shots have been attached instead.
 
 ### Checkout
+![image](https://user-images.githubusercontent.com/81588887/165604794-32281c30-96d1-46d6-9c2a-d36a52127abe.png)
+
 ### Design
+![image](https://user-images.githubusercontent.com/81588887/165604965-44e73172-e9f7-4e7b-bb3b-ba970a0048cb.png)
+
 ### Products
+![image](https://user-images.githubusercontent.com/81588887/165605181-721af510-1de7-4628-976d-ff4710b47d46.png)
+
 ### Profiles
+![image](https://user-images.githubusercontent.com/81588887/165605322-05856304-6555-4439-8a8f-35bad0354cc4.png)
 
 </details>
 
