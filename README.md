@@ -98,6 +98,9 @@ In this project there are 3 main databases. The order database, the in-home desi
 ![image](https://user-images.githubusercontent.com/81588887/165592192-408aa7cd-e968-40d7-acaa-a85baf35d6de.png)
 ![image](https://user-images.githubusercontent.com/81588887/165592254-be079c86-42ba-4c0f-ab75-cb6c8c9a3875.png)
 
+Full Database Schema (made using LucidChart)
+
+
 ## Current Features
 <details>
 <summary>Features</summary>
