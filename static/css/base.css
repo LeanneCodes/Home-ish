@@ -254,7 +254,6 @@ input[name='q']::placeholder {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    cursor: pointer;
 }
 
 /* Shopping Bag */
@@ -323,7 +322,6 @@ input[name='q']::placeholder {
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
-    cursor: pointer;
 }
 
 .w-1 {
