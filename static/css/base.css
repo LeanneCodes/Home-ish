@@ -352,6 +352,10 @@ input[name='q']::placeholder {
     grid-row: span 3;
 }
 
+#decor1 {
+    background-image: url("/media/decor6.jpeg");
+}
+
 /* Contact Us */
 .dbox {
     margin-bottom: 25px;
@@ -906,7 +910,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 390px) {
     #hero-image {
         margin-top: 80px;
     }
