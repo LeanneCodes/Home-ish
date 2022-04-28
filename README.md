@@ -307,7 +307,9 @@ Automated test coverage was conducted at app level. The coverage report at the t
 * Pep8 – No errors found
     * Flake8 identified 2 main issues:
         * 'checkout.signals' imported but unused. However Pep8 found no problems with the code.
+        ![image](https://user-images.githubusercontent.com/81588887/165705945-51ae9b16-9d82-4972-8684-d36dac614807.png)
         * local variable 'e' is assigned to but never used. However Pep8 found no problems with the code.
+        ![image](https://user-images.githubusercontent.com/81588887/165706017-4dfe7c25-b233-4f5c-87a2-986ddba93ee8.png)
 * JShint – No errors found
     * Stripe Payments
         * There are 5 functions in this file.
