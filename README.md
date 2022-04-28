@@ -351,8 +351,9 @@ Automated test coverage was conducted at app level. The coverage report at the t
         * It takes no arguments.
         * This function contains 12 statements.
         * Cyclomatic complexity number for this function is 2.
-* Heroku works correctly as planned across Google Chrome, Safari, Microsoft Edge and Mozilla Firefox
-* Tested the Heroku program on iPhone 12, Google Pixel 2, Motorola Edge and Huawei P9
+* Heroku works correctly as planned across Google Chrome and Mozilla Firefox
+  * Safari and Microsoft Edge do not load images that have this code as the source `{{ MEDIA_URL }}image_name.png`
+* Tested the Heroku program on iPhone 12 and Google Pixel 2
 
 ## Project Bugs & Solutions
 
@@ -366,7 +367,7 @@ The décor images on the décor inspiration page on homepage were originally not
 Bugs | Ideal Solution
 -------- | --------
 On the product detail page, users are limited to add 50 of each product to their shopping cart. This works perfectly fine. However, the user can override this and add more than 50 on the shopping cart page. After implementing the revised code suggested by Code Institute, the user can extend past the JavaScript limit and add a quantity greater than 50 by manually typing in the value. | Ideally the limit would be enforced on the shopping cart page, but for now, this is currently not in place.
-Décor images are not displaying on some mobile devices, specifically iPhone. On inspect, the mobile device shows the images accurately. | Ideally the images would render on all smartphones, as users are liekly to shop and browse on their phone over desktop.
+Décor images are not displaying on some mobile devices and servers such as, iPhone, Safari and Microsoft Edge. On inspect, the mobile device shows the images accurately for iPhone. | Ideally the images would render on all smartphones and browsers, as users are liekly to shop and browse on their phone over desktop.
 
 ## Deployment
 <details>
