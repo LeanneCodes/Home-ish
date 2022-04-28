@@ -278,7 +278,7 @@ Django | The user can update their delivery information from their account page 
 Django | To award users free delivery and a £50 discount when their subtotal is £350 | ![image](https://user-images.githubusercontent.com/81588887/165599428-a6144998-bc64-4580-b874-64e27d8bc8db.png)(subtotal is less than £350)![image](https://user-images.githubusercontent.com/81588887/165599518-d0c56c92-5629-4657-9ff4-f9e779dc6da9.png)(subtotal is greater than £350 and the user has free delivery and £50 off)
 Other (Stripe) | To demonstrate that the website will accept or reject payments if the card details are valid or not | ![image](https://user-images.githubusercontent.com/81588887/165599828-e72ef13a-fc87-4f53-9979-95956b79baa7.png)(successful test card payment details)![image](https://user-images.githubusercontent.com/81588887/165600097-1afaa7f4-ed6f-4acf-9e3c-efead128ef65.png)(declined test card payment details)
 Other (Stripe) | Users will be sent confirmation emails with their order details if their payement was successful | ![Screenshot 2022-04-27 at 20 02 22](https://user-images.githubusercontent.com/81588887/165600791-8e5f0049-cf9a-481e-beed-76b845082558.png)
-Other (Stripe) | If payment is successful on the heroku app, Stripe will confirm this in the events tab | 
+Other (Stripe) | If payment is successful on the heroku app, Stripe will confirm this in the events tab | ![image](https://user-images.githubusercontent.com/81588887/165699494-6a7bbd72-ee7a-440b-979a-e16aea2bb6c8.png)
 
 </details>
 
