@@ -3,7 +3,7 @@
 ## Introduction
 The idea behind Home(ish) is to provide luxury furniture to renters and landlords, who enjoy lavish items and don't want to skimp out just because they are renting. To make this a stronger business case, the Home(ish) brand is also offering a upcycling, buy back scheme, where renters and landlords can sell items back to Home(ish) at a fraction of the cost they bought it for. Home(ish) manufacturers will then repair the furniture to a high quality, to which it could be sold again to new customers. If the piece of furniture is not in a resellable state, the renter/landlord can still receive some money back for their items, but Home(ish) will recycle the furniture where possible. The aim is to reduce carbon footprint, while upholding a luxurious feel to the products Home(ish) sells. The brand is also in conjuction with Earthly.org, a carbon footprint charity. So, where we can donate items to their cause, or help raise money for them, we do.
 
-![image](https://user-images.githubusercontent.com/81588887/165587950-a38e8c93-c892-4e5c-8c89-5878514dc7a7.png)
+<img width="796" alt="image" src="https://user-images.githubusercontent.com/81588887/165744433-7974ee18-7355-49cf-8a46-bb0fbf469673.png">
 
 [Home(ish) Website](https://homeish.herokuapp.com/)
 
@@ -262,6 +262,10 @@ There is also the opportunity to do cross-channel attribution and see what marke
 
 * To include a stock count of each product and every time that product was purchased the stock count would reduce by 1. Then when the stock count was 5 or less, a note or tag on the image would say low stock. This could help entice users to buy that product as not to risk missing out.
 
+* Add pagination on the all products page to reduce time spent scrolling through all products.
+
+* Add a coupon code box that can validate coupons and discount them from the grand total cost.
+
 ## Testing
 <details>
 <summary>Manual Tests Conducted</summary>
@@ -351,6 +355,7 @@ Automated test coverage was conducted at app level. The coverage report at the t
         * It takes no arguments.
         * This function contains 12 statements.
         * Cyclomatic complexity number for this function is 2.
+* MailChimp mc-validator.js is showing a 3rd party error and causing the website to not be as fast to load, as noted in lighthouse.
 * Heroku works correctly as planned across Google Chrome and Mozilla Firefox
   * Safari and Microsoft Edge do not load images that have this code as the source `{{ MEDIA_URL }}image_name.png`
 * Tested the Heroku program on iPhone 12 and Google Pixel 2
