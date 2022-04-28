@@ -246,6 +246,13 @@ Full Database Schema (made using LucidChart)
 ![image](https://user-images.githubusercontent.com/81588887/165603705-be3c0cbc-f859-4128-8703-5373df18d014.png)
 [Home(ish) Pinterest Page](https://www.pinterest.co.uk/homeish_uk/_created/)
 
+## Marketing Strategy
+Given the brand's new launch, it's best to focus on cost-effective media channels that have scalable reach amongst Home(ish)'s target audiences. Social media can be cost-effective channel, if the brand focuses on building their organic social presence, but can also tap into paid social media to attract more users to their brand. With a budget of appoximately £50k to spend on social media and SEO marketing. It would be my recommendation to spend £20k on one social media to start with, preferably Facebook, given their is a plethora of our target audience on this platform already. We can do a brand awareness campaign across newsfeed and stories posts to start with, while doing split testing against our two audiences, renters and landlords and see which audience has become more aware of the brand. Once we have this established, we can then funnel more budget into the winning audience and prioritise them in future paid social marketing practices. If we see Facebook perform well, then we can see if the same two audiences are active on Instagram and Pinterest and adjust budget to them accordingly.
+
+For SEO, it can be more expensive, hence why I recommend putting £30k to start with behind it. This will give us access to not just SEO but also paid search and allow us to utilise Google's paid offerings that can help us determine what keywords we should use and bid against. Once we have an understanding on what terms is best for Home(ish)'s ranking in Google, we can then determine how much more budget to put into it effefctvely.
+
+There is also the opportunity to do cross-channel attribution and see what marketing channels are driving the best results for Home(ish). This will determine how much budget each channel gets for the following year for marketing and advertising.
+
 ## Future Implementations
 * To include a wishlist page, so users can favourite items that they would like to purchase in the future.
 
@@ -412,6 +419,7 @@ Caching, Media Files & Stripe | 12 | Now send a test webhook from Stripe to make
 * Python3
 * Django
 * Postgres
+* Stripe Payments
 
 ## Credits
 

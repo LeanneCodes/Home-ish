@@ -134,10 +134,6 @@ body {
     text-align: center;
 }
 
-footer {
-    background-color: #25596f;
-}
-
 .footer-heading {
     color: white;
 }
@@ -488,7 +484,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* Footer */
+/* Footer design from Colorlib */
 .blog-img,
 .user-img {
     background-size: cover;
