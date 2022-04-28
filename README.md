@@ -304,8 +304,51 @@ Automated test coverage was conducted at app level. The coverage report at the t
 ### Validation Checks
 * HTML W3C Validator – No errors found
 * CSS3 Jigsaw Validator – No errors found
-* Pep8 – No errors found, except for checkout webhooks and checkout
+* Pep8 – No errors found
+    * Flake8 identified 2 main issues:
+        * 'checkout.signals' imported but unused. However Pep8 found no problems with the code.
+        * local variable 'e' is assigned to but never used. However Pep8 found no problems with the code.
 * JShint – No errors found
+    * Stripe Payments
+        * There are 5 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 1.
+        * Largest function has 10 statements in it, while the median is 5.
+        * The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+    * Country Field Selector
+        * There is only one function in this file.
+        * It takes no arguments.
+        * This function contains 4 statements.
+        * Cyclomatic complexity number for this function is 2.
+    * Quantity Selector
+        * There are 3 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 1.
+        * Largest function has 5 statements in it, while the median is 2.
+        * The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+    * Quantity Input
+        * There are 4 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 1.
+        * Largest function has 7 statements in it, while the median is 6.
+        * The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+    * EmailJS
+        * There are 4 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 0.5.
+        * Largest function has 3 statements in it, while the median is 2.
+        * The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+    * Scroll Button
+        * There is only one function in this file.
+        * It takes one argument.
+        * This function contains only one statement.
+        * Cyclomatic complexity number for this function is 1.
+    * File Name Change
+        * There is only one function in this file.
+        * It takes no arguments.
+        * This function contains 2 statements.
+        * Cyclomatic complexity number for this function is 1.
+    * Sorting
+        * There is only one function in this file.
+        * It takes no arguments.
+        * This function contains 12 statements.
+        * Cyclomatic complexity number for this function is 2.
 * Heroku works correctly as planned across Google Chrome, Safari, Microsoft Edge and Mozilla Firefox
 * Tested the Heroku program on iPhone 12, Google Pixel 2, Motorola Edge and Huawei P9
 
