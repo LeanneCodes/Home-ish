@@ -934,6 +934,10 @@ footer {
     .buffer-small {
         padding: 0px 10px;
     }
+
+    .sort-mobile {
+        margin-top: 50px !important;
+    }
 }
 
 @media (max-width: 320px) {
