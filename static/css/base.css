@@ -255,11 +255,6 @@ input[name='q']::placeholder {
     object-fit: cover;
     object-position: 50% 50%;
     cursor: pointer;
-    transition: .5s ease-in-out;
-}
-
-.social-items:hover .social-image img{
-    transform: scale(1.5);
 }
 
 /* Shopping Bag */
@@ -329,11 +324,6 @@ input[name='q']::placeholder {
     object-fit: cover;
     object-position: 50% 50%;
     cursor: pointer;
-    transition: .5s ease-in-out;
-}
-
-.gallery-item:hover .image img {
-    transform: scale(1.5);
 }
 
 .w-1 {
