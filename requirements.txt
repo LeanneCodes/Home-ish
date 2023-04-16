@@ -2,6 +2,7 @@ asgiref==3.5.0
 backports.zoneinfo==0.2.1
 boto3==1.21.39
 botocore==1.24.39
+coverage==6.3.2
 dj-database-url==0.5.0
 Django==3.2
 django-allauth==0.41.0
@@ -14,6 +15,7 @@ gunicorn==20.1.0
 jmespath==1.0.0
 oauthlib==3.2.0
 Pillow==9.0.1
+psycopg2==2.9.6
 psycopg2-binary==2.9.3
 PyJWT==2.3.0
 python3-openid==3.2.0
